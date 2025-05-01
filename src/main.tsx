@@ -4,7 +4,7 @@ import { UserProvider } from "./contexts/UserProvider.tsx";
 import { AuthProvider } from "./contexts/AuthProvider.tsx";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-
+import { Analytics } from "@vercel/analytics/react"
 
 import ThemeProvider from "./contexts/ThemeProvider.tsx";
 import UploadProvider from "./contexts/UploadProvider.tsx";
@@ -19,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
         <ThemeProvider>
           <UserProvider>
             <UploadProvider>
+              <Analytics/>
                 <Toaster position="top-right" />
                 <App />
             </UploadProvider>

@@ -10,7 +10,7 @@ import { useTheme } from "@/contexts/ThemeProvider";
 import ErrorMessage from "@/components/ErrorMessage";
 import Logo from "@/components/Logo";
 
-const URL_SERVER = import.meta.env.VITE_URL_SERVER as string;
+const URL_SERVER = import.meta.env.VITE_URL_SERVER as string
 
 function LoginPage() {
   const navigate = useNavigate();
