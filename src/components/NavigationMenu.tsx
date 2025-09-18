@@ -7,9 +7,9 @@ import {
   LucideLogOut,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import User from "./User";
 import { Card } from "./ui/card";
-import { useAuth } from "@/contexts/AuthProvider";
+
+
 function NavigationMenu() {
   const navList = [
     {
@@ -43,7 +43,7 @@ function NavigationMenu() {
       icon: <LucideSettings size={20} />,
     },
   ];
-  const { logout } = useAuth();
+
   return (
     <Card className="fixed right-20 top-[30%]  py-8  px-2 border rounded-2xl z-[999px] shadow-md hover:scale-125 duration-150">
       <nav>
@@ -57,9 +57,8 @@ function NavigationMenu() {
               </li>
             );
           })}
-          <User />
         </ul>
-        <button className="my-4 p-1 hover:bg-zinc-400" onClick={logout}>
+        <button className="my-4 p-1 hover:bg-zinc-400" onClick={() => { }}>
           <LucideLogOut size={20} />
         </button>
       </nav>

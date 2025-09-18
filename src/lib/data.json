@@ -1,0 +1,458 @@
+{
+    "en": {
+        "user": {
+            "id": "123",
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "picture": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+            "role": "USER",
+            "resume": "Full-stack Developer with 5 years of experience in building scalable web applications and leading agile teams."
+        },
+        "userInfoContext": {
+            "bio": {
+                "id": "1",
+                "bio": "A passionate developer with solid experience in modern web technologies and cloud solutions.",
+                "heroImage": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+                "bioName": "John Doe",
+                "jobTitle": "Full-stack Developer"
+            },
+            "experiences": [
+                {
+                    "id": "1",
+                    "cName": "TechCorp",
+                    "cLogo": "https://example.com/techcorp-logo.jpg",
+                    "position": "Senior Developer",
+                    "duration": "2 years",
+                    "role": "Lead Developer",
+                    "location": "New York"
+                },
+                {
+                    "id": "2",
+                    "cName": "WebSolutions",
+                    "cLogo": "https://example.com/websolutions-logo.jpg",
+                    "position": "Frontend Engineer",
+                    "duration": "3 years",
+                    "role": "React Specialist",
+                    "location": "Remote"
+                }
+            ],
+            "projects": [
+                {
+                    "id": "1",
+                    "title": "Project A",
+                    "description": "A web application that automates tasks for enterprises.",
+                    "thumbnail": "https://cdn.dribbble.com/userupload/44968361/file/08c147424157a8e1d2e1690969a7836d.png?resize=1024x768&vertical=center",
+                    "ImagesList": [
+                        {
+                            "id": "1",
+                            "url": "https://cdn.dribbble.com/userupload/44968362/file/fa74e656985d216211d6a0a8dd5fa967.png?resize=1024x768&vertical=center"
+                        },
+                        {
+                            "id": "2",
+                            "url": "https://cdn.dribbble.com/userupload/44968368/file/b62a3a635496fe80b4cd2f2fe04b6d1b.png?resize=1024x768&vertical=center"
+                        }
+                    ],
+                    "source": "https://github.com/johndoe/project-a",
+                    "likes": 150,
+                    "views": 1000
+                },
+                {
+                    "id": "2",
+                    "title": "Mobile Shop",
+                    "description": "An e-commerce mobile app built with React Native.",
+                    "thumbnail": "https://cdn.dribbble.com/userupload/44963774/file/c5af6bf50c764b451545a3290394daec.png?resize=752x573&vertical=center",
+                    "ImagesList": [
+                        {
+                            "id": "1",
+                            "url": "https://cdn.dribbble.com/userupload/44963775/file/a6859c1005a5191f295e036658970734.png?resize=752x573&vertical=center"
+                        }
+                    ],
+                    "source": "https://github.com/johndoe/mobile-shop",
+                    "likes": 200,
+                    "views": 2200
+                }
+            ],
+            "skills": [
+                {
+                    "id": "1",
+                    "skillName": "JavaScript",
+                    "skillLogo": "https://img.icons8.com/?size=48&id=108784&format=png"
+                },
+                {
+                    "id": "2",
+                    "skillName": "React",
+                    "skillLogo": "https://img.icons8.com/?size=80&id=asWSSTBrDlTW&format=png"
+                },
+                {
+                    "id": "3",
+                    "skillName": "Node.js",
+                    "skillLogo": "https://img.icons8.com/?size=48&id=54087&format=png"
+                },
+                {
+                    "id": "4",
+                    "skillName": "Docker",
+                    "skillLogo": "https://img.icons8.com/?size=80&id=Wln8Z3PcXanx&format=png"
+                },
+                {
+                    "id": "5",
+                    "skillName": "Tailwind",
+                    "skillLogo": "https://img.icons8.com/?size=48&id=4PiNHtUJVbLs&format=png"
+                },
+                {
+                    "id": "6",
+                    "skillName": "Supabase",
+                    "skillLogo": "https://img.icons8.com/?size=48&id=sH0rW2TvYdr9&format=png"
+                },
+                {
+                    "id": "7",
+                    "skillName": "Firebase",
+                    "skillLogo": "https://img.icons8.com/?size=80&id=ROMfFZ1tMhpk&format=png"
+                },
+                {
+                    "id": "8",
+                    "skillName": "Prisma ORM",
+                    "skillLogo": "https://img.icons8.com/?size=48&id=YKKmRFS8Utmm&format=png"
+                }
+            ],
+            "testimonials": [
+                {
+                    "id": "1",
+                    "profile": "https://i.redd.it/3kj8naxi8io61.jpg",
+                    "name": "Jane Smith",
+                    "feedback": "John is an excellent developer with a keen eye for detail.",
+                    "video": "https://example.com/testimonial-video.mp4",
+                    "position": "Project Manager at TechCorp",
+                    "createdAt": "2025-01-01T12:00:00Z"
+                },
+                {
+                    "id": "2",
+                    "profile": "https://static.vecteezy.com/system/resources/previews/022/216/794/non_2x/face-profile-images-illustration-in-flat-style-free-vector.jpg",
+                    "name": "Michael Brown",
+                    "feedback": "Very professional, delivered on time and exceeded expectations.",
+                    "video": "https://example.com/testimonial-video2.mp4",
+                    "position": "CTO at WebSolutions",
+                    "createdAt": "2025-03-15T15:30:00Z"
+                }
+            ],
+            "layouts": {
+                "id": "1",
+                "heroLayout": "layout1",
+                "expLayout": "layout2",
+                "projectsLayout": "layout3",
+                "skillsLayout": "layout4"
+            },
+            "contacts": {
+                "id": "1",
+                "linkedin": "https://linkedin.com/in/johndoe",
+                "github": "https://github.com/johndoe",
+                "youtube": "https://youtube.com/johndoe",
+                "twitter": "https://twitter.com/johndoe",
+                "email": "john.doe@example.com",
+                "website": "https://johndoe.dev"
+            }
+        },
+        "theme": {
+            "backgroundColor": "#ffffff",
+            "cardColor": "#f4f4f4",
+            "primaryText": "#000000",
+            "secondaryText": "#555555",
+            "borderColor": "#cccccc"
+        },
+        "footer": {
+            "text": "© 2025 John Doe. All rights reserved.",
+            "links": {
+                "privacyPolicy": "Privacy Policy",
+                "termsOfService": "Terms of Service",
+                "contact": "Contact"
+            }
+        }
+    },
+    "es": {
+        "user": {
+            "id": "123",
+            "name": "Juan Pérez",
+            "email": "juan.perez@ejemplo.com",
+            "picture": "https://example.com/perfil.jpg",
+            "role": "USUARIO",
+            "resume": "Desarrollador full-stack con 5 años de experiencia construyendo aplicaciones escalables."
+        },
+        "userInfoContext": {
+            "bio": {
+                "id": "1",
+                "bio": "Un desarrollador apasionado con experiencia en tecnologías modernas de la web y la nube.",
+                "heroImage": "https://example.com/hero.jpg",
+                "bioName": "Juan Pérez",
+                "jobTitle": "Desarrollador Full-stack"
+            },
+            "experiences": [
+                {
+                    "id": "1",
+                    "cName": "TechCorp",
+                    "cLogo": "https://example.com/techcorp-logo.jpg",
+                    "position": "Desarrollador Senior",
+                    "duration": "2 años",
+                    "role": "Desarrollador Líder",
+                    "location": "Madrid"
+                },
+                {
+                    "id": "2",
+                    "cName": "WebSolutions",
+                    "cLogo": "https://example.com/websolutions-logo.jpg",
+                    "position": "Ingeniero Frontend",
+                    "duration": "3 años",
+                    "role": "Especialista en React",
+                    "location": "Remoto"
+                }
+            ],
+            "projects": [
+                {
+                    "id": "1",
+                    "title": "Proyecto A",
+                    "description": "Una aplicación web que automatiza tareas para empresas.",
+                    "thumbnail": "https://example.com/proyecto-a-thumbnail.jpg",
+                    "ImagesList": [
+                        {
+                            "id": "1",
+                            "url": "https://example.com/proyecto-a-imagen1.jpg"
+                        }
+                    ],
+                    "source": "https://github.com/juanperez/proyecto-a",
+                    "likes": 150,
+                    "views": 1000
+                },
+                {
+                    "id": "2",
+                    "title": "Tienda Móvil",
+                    "description": "Aplicación móvil de comercio electrónico desarrollada con React Native.",
+                    "thumbnail": "https://example.com/tienda-movil-thumbnail.jpg",
+                    "ImagesList": [
+                        {
+                            "id": "1",
+                            "url": "https://example.com/tienda-movil-imagen1.jpg"
+                        }
+                    ],
+                    "source": "https://github.com/juanperez/tienda-movil",
+                    "likes": 200,
+                    "views": 2200
+                }
+            ],
+            "skills": [
+                {
+                    "id": "1",
+                    "skillName": "JavaScript",
+                    "skillLogo": "https://example.com/js-logo.png"
+                },
+                {
+                    "id": "2",
+                    "skillName": "React",
+                    "skillLogo": "https://example.com/react-logo.png"
+                },
+                {
+                    "id": "3",
+                    "skillName": "Node.js",
+                    "skillLogo": "https://example.com/node-logo.png"
+                }
+            ],
+            "testimonials": [
+                {
+                    "id": "1",
+                    "profile": "https://example.com/testimonial-profile.jpg",
+                    "name": "Ana Martínez",
+                    "feedback": "Juan es un excelente desarrollador con un ojo agudo para los detalles.",
+                    "video": "https://example.com/testimonial-video.mp4",
+                    "position": "Gerente de Proyecto en TechCorp",
+                    "createdAt": "2025-01-01T12:00:00Z"
+                },
+                {
+                    "id": "2",
+                    "profile": "https://example.com/testimonial-profile2.jpg",
+                    "name": "Carlos López",
+                    "feedback": "Muy profesional, entregó a tiempo y superó las expectativas.",
+                    "video": "https://example.com/testimonial-video2.mp4",
+                    "position": "CTO en WebSolutions",
+                    "createdAt": "2025-03-15T15:30:00Z"
+                }
+            ],
+            "layouts": {
+                "id": "1",
+                "heroLayout": "layout1",
+                "expLayout": "layout2",
+                "projectsLayout": "layout3",
+                "skillsLayout": "layout4"
+            },
+            "contacts": {
+                "id": "1",
+                "linkedin": "https://linkedin.com/in/juanperez",
+                "github": "https://github.com/juanperez",
+                "youtube": "https://youtube.com/juanperez",
+                "twitter": "https://twitter.com/juanperez",
+                "email": "juan.perez@ejemplo.com",
+                "website": "https://juanperez.dev"
+            },
+            "pending": false,
+            "error": "",
+            "setLayouts": "function",
+            "getUserInfo": "function",
+            "setBio": "function",
+            "setExperiences": "function",
+            "setProjects": "function",
+            "setSkills": "function",
+            "setTestimonials": "function",
+            "setContacts": "function"
+        },
+        "theme": {
+            "backgroundColor": "#ffffff",
+            "cardColor": "#f4f4f4",
+            "primaryText": "#000000",
+            "secondaryText": "#555555",
+            "borderColor": "#cccccc"
+        },
+        "footer": {
+            "text": "© 2025 Juan Pérez. Todos los derechos reservados.",
+            "links": {
+                "privacyPolicy": "Política de Privacidad",
+                "termsOfService": "Términos de Servicio",
+                "contact": "Contacto"
+            }
+        }
+    },
+    "ar": {
+        "user": {
+            "id": "123",
+            "name": "محمد علي",
+            "email": "mohamed.ali@example.com",
+            "picture": "https://example.com/profile-ar.jpg",
+            "role": "مستخدم",
+            "resume": "مطور برمجيات Full-stack مع خبرة ٥ سنوات في تطوير تطبيقات الويب."
+        },
+        "userInfoContext": {
+            "bio": {
+                "id": "1",
+                "bio": "مطور شغوف يتمتع بخبرة قوية في تقنيات الويب الحديثة والحلول السحابية.",
+                "heroImage": "https://example.com/hero-ar.jpg",
+                "bioName": "محمد علي",
+                "jobTitle": "مطور Full-stack"
+            },
+            "experiences": [
+                {
+                    "id": "1",
+                    "cName": "تك كورب",
+                    "cLogo": "https://example.com/techcorp-logo.jpg",
+                    "position": "مطور أول",
+                    "duration": "سنتان",
+                    "role": "قائد فريق التطوير",
+                    "location": "القاهرة"
+                },
+                {
+                    "id": "2",
+                    "cName": "ويب سولوشنز",
+                    "cLogo": "https://example.com/websolutions-logo.jpg",
+                    "position": "مهندس واجهات أمامية",
+                    "duration": "٣ سنوات",
+                    "role": "متخصص React",
+                    "location": "عن بعد"
+                }
+            ],
+            "projects": [
+                {
+                    "id": "1",
+                    "title": "المشروع أ",
+                    "description": "تطبيق ويب يقوم بأتمتة المهام للشركات.",
+                    "thumbnail": "https://example.com/project-a-ar-thumbnail.jpg",
+                    "ImagesList": [
+                        {
+                            "id": "1",
+                            "url": "https://example.com/project-a-ar-image1.jpg"
+                        }
+                    ],
+                    "source": "https://github.com/mohamedali/project-a",
+                    "likes": 160,
+                    "views": 1100
+                },
+                {
+                    "id": "2",
+                    "title": "متجر الجوال",
+                    "description": "تطبيق تجارة إلكترونية للهواتف باستخدام React Native.",
+                    "thumbnail": "https://example.com/mobile-shop-ar-thumbnail.jpg",
+                    "ImagesList": [
+                        {
+                            "id": "1",
+                            "url": "https://example.com/mobile-shop-ar-image1.jpg"
+                        }
+                    ],
+                    "source": "https://github.com/mohamedali/mobile-shop",
+                    "likes": 210,
+                    "views": 2500
+                }
+            ],
+            "skills": [
+                {
+                    "id": "1",
+                    "skillName": "جافاسكربت",
+                    "skillLogo": "https://example.com/js-logo.png"
+                },
+                {
+                    "id": "2",
+                    "skillName": "ريأكت",
+                    "skillLogo": "https://example.com/react-logo.png"
+                },
+                {
+                    "id": "3",
+                    "skillName": "نود جي إس",
+                    "skillLogo": "https://example.com/node-logo.png"
+                }
+            ],
+            "testimonials": [
+                {
+                    "id": "1",
+                    "profile": "https://example.com/testimonial-ar-profile.jpg",
+                    "name": "أحمد حسن",
+                    "feedback": "محمد مطور مبدع ودقيق جدًا في عمله.",
+                    "video": "https://example.com/testimonial-ar-video.mp4",
+                    "position": "مدير مشروع في تك كورب",
+                    "createdAt": "2025-01-01T12:00:00Z"
+                },
+                {
+                    "id": "2",
+                    "profile": "https://example.com/testimonial-ar-profile2.jpg",
+                    "name": "سارة محمود",
+                    "feedback": "محترف للغاية، التزم بالوقت وتجاوز التوقعات.",
+                    "video": "https://example.com/testimonial-ar-video2.mp4",
+                    "position": "المدير التقني في ويب سولوشنز",
+                    "createdAt": "2025-03-15T15:30:00Z"
+                }
+            ],
+            "layouts": {
+                "id": "1",
+                "heroLayout": "layout1",
+                "expLayout": "layout2",
+                "projectsLayout": "layout3",
+                "skillsLayout": "layout4"
+            },
+            "contacts": {
+                "id": "1",
+                "linkedin": "https://linkedin.com/in/mohamedali",
+                "github": "https://github.com/mohamedali",
+                "youtube": "https://youtube.com/mohamedali",
+                "twitter": "https://twitter.com/mohamedali",
+                "email": "mohamed.ali@example.com",
+                "website": "https://mohamedali.dev"
+            }
+        },
+        "theme": {
+            "backgroundColor": "#ffffff",
+            "cardColor": "#f4f4f4",
+            "primaryText": "#000000",
+            "secondaryText": "#555555",
+            "borderColor": "#cccccc"
+        },
+        "footer": {
+            "text": "© ٢٠٢٥ محمد علي. جميع الحقوق محفوظة.",
+            "links": {
+                "privacyPolicy": "سياسة الخصوصية",
+                "termsOfService": "شروط الاستخدام",
+                "contact": "تواصل معنا"
+            }
+        }
+    }
+}

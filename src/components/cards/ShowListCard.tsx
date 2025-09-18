@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { useTheme } from "@/contexts/ThemeProvider";
 import Loader from "../loader";
-import { useAuth } from "@/contexts/AuthProvider";
 import { deleteById } from "@/lib/handlers";
 import toast from "react-hot-toast";
 // import { ISkillType } from "@/lib/types";
@@ -28,26 +27,25 @@ function ShowListCard({
   setUpdate?: () => void;
 }) {
   const { activeTheme } = useTheme();
-  const { token } = useAuth();
   // const navigate = useNavigate();
   const [pending, setPending] = useState<boolean>(false);
-  const handleDelete = async (id: string) => {
-    try {
-      setPending(true);
-      const deleteResult = await deleteById({
-        id,
-        token,
-        deleteRoute: sectionName,
-      });
-      toast.success(deleteResult.message);
-      return;
-    } catch (err) {
-      console.log((err as Error).message);
-      return;
-    } finally {
-      setPending(false);
-    }
-  };
+  // const handleDelete = async (id: string) => {
+  //   try {
+  //     setPending(true);
+  //     const deleteResult = await deleteById({
+  //       id,
+  //       token,
+  //       deleteRoute: sectionName,
+  //     });
+  //     toast.success(deleteResult.message);
+  //     return;
+  //   } catch (err) {
+  //     console.log((err as Error).message);
+  //     return;
+  //   } finally {
+  //     setPending(false);
+  //   }
+  // };
   // const handleUpdate = async (id: string) => {
   //   try {
   //     setPending(true);
@@ -79,22 +77,19 @@ function ShowListCard({
         backgroundColor: activeTheme.cardColor,
         borderColor: activeTheme.borderColor,
       }}
-      className={`w-full flex p-2 rounded-2xl border  ${
-        vertical
+      className={`w-full flex p-2 rounded-2xl border  ${vertical
           ? "flex-col justify-start items-start gap-2"
           : "lg:justify-between lg:items-center  lg:flex-row flex-col justify-start items-start  gap-2"
-      }`}
+        }`}
     >
       <div className="flex justify-center items-center gap-4">
         <div
-          className={` overflow-hidden flex items-center justify-center ${
-            vertical ? "w-10 h-10 rounded-full" : "w-14 h-14 rounded-2xl "
-          }`}
+          className={` overflow-hidden flex items-center justify-center ${vertical ? "w-10 h-10 rounded-full" : "w-14 h-14 rounded-2xl "
+            }`}
         >
           <img
-            className={` w-full h-full object-cover ${
-              vertical ? "rounded-full" : " rounded-2xl"
-            }`}
+            className={` w-full h-full object-cover ${vertical ? "rounded-full" : " rounded-2xl"
+              }`}
             loading="lazy"
             src={image}
             alt={title}
@@ -128,7 +123,7 @@ function ShowListCard({
           className="disabled:cursor-not-allowed"
           type="button"
           disabled={pending}
-          onClick={() => handleDelete(id)}
+          onClick={() => { }}
         >
           {pending ? <Loader size="sm" /> : "delete"}
         </Button>

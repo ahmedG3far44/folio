@@ -1,20 +1,15 @@
 import {
   IBioType,
   IContactType,
-  IExperienceType,
   ILayoutType,
-  IProjectType,
-  ISkillType,
   ITestimonialType,
   UserInfoContextType,
 } from "@/lib/types";
-
-import { FC, PropsWithChildren, useContext, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useContext, useState } from "react";
 import { createContext } from "react";
-import { useAuth } from "./AuthProvider";
-import { useParams } from "react-router-dom";
 
-const URL_SERVER = import.meta.env.VITE_URL_SERVER as string;
+import userData from "../lib/data.json"
+
 
 export const UserContext = createContext<UserInfoContextType>({
   bio: {
@@ -44,27 +39,29 @@ export const UserContext = createContext<UserInfoContextType>({
   },
   pending: false,
   error: "",
-  setLayouts: () => {},
-  getUserInfo: async () => Promise.resolve({} as UserInfoContextType),
-  // handleUserInfo: () => {},
-  setBio: () => {},
-  setExperiences: () => {},
-  setProjects: () => {},
-  setSkills: () => {},
-  setTestimonials: () => {},
-  setContacts: () => {},
+  languages: [],
+  activeLanguage: "en",
+  footer: {
+    text: "",
+    links: {
+      contact: "",
+      privacyPolicy: "",
+      termsOfService: ""
+    },
+  },
+  switchLanguage: () => { },
+  setLayouts: () => { },
 });
 
-export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { user } = useAuth();
-  const { userId } = useParams();
+export type LangType = keyof typeof userData;
 
-  const [bio, setBio] = useState<IBioType>();
-  const [experiences, setExperiences] = useState<IExperienceType[]>();
-  const [projects, setProjects] = useState<IProjectType[]>();
-  const [skills, setSkills] = useState<ISkillType[]>();
-  const [testimonials, setTestimonials] = useState<ITestimonialType[]>();
-  const [userContacts, setContacts] = useState<IContactType>();
+export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
+  const [languagesList] = useState<string[]>(Object.keys(userData))
+  const [activeLanguage, setActiveLanguage] = useState<LangType>("en")
+  const { bio, projects, contacts, experiences, skills } = userData[activeLanguage].userInfoContext;
+
+  const footer = userData[activeLanguage].footer;
+  const testimonials = userData[activeLanguage].userInfoContext.testimonials.map(t => ({ ...t, createdAt: new Date(t.createdAt) })) as ITestimonialType[];
   const [userLayouts, setLayouts] = useState<ILayoutType>({
     id: "1",
     heroLayout: "1",
@@ -72,56 +69,12 @@ export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
     projectsLayout: "1",
     skillsLayout: "1",
   });
-  const [pending, setPending] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const getUserInfoById = async (id: string) => {
-    try {
-      setPending(true);
-      const response = await fetch(`${URL_SERVER}/user/${id}`);
-      const info = await response.json();
-      return info.data;
-    } catch (err) {
-      return { data: "error", message: err };
-    } finally {
-      setPending(false);
-    }
-  };
-
-  // const handleUserInfo = async (userId: string) => {
-  //   try {
-  //     const data = await getUserInfoById(userId);
-  //     const { bio, user, contacts, layouts } = data;
-  //     setBio({ ...bio });
-  //     setExperiences(user.ExperiencesList);
-  //     setProjects(user.ProjectsList);
-  //     setSkills(user.SkillsList);
-  //     setTestimonials(user.Testimonials);
-  //     setContacts({ ...contacts });
-  //     setLayouts({ ...layouts });
-  //     return data;
-  //   } catch (err) {
-  //     setError((err as Error).message);
-  //     return;
-  //   }
-  // };
-  useEffect(() => {
-    getUserInfoById(userId ? userId : user?.id)
-      .then((data) => {
-        const { bio, user, contacts, layouts } = data;
-        setBio({ ...bio });
-        setExperiences(user?.ExperiencesList);
-        setProjects(user?.ProjectsList);
-        setSkills(user?.SkillsList);
-        setTestimonials(user?.Testimonials);
-        setContacts({ ...contacts });
-        setLayouts({ ...layouts });
-      })
-      .catch((error) => {
-        setError(error.message);
-        return;
-      });
-  }, [user?.id, userId]);
-
+  const [pending] = useState(false);
+  const [error] = useState<string | null>(null);
+  const switchLanguage = (newLang: LangType) => {
+    setActiveLanguage(newLang)
+    console.log("language changed to ", newLang)
+  }
   return (
     <UserContext.Provider
       value={{
@@ -130,20 +83,15 @@ export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
         projects: projects || [],
         skills: skills || [],
         testimonials: testimonials || [],
-        contacts: userContacts as IContactType,
+        contacts: contacts as IContactType,
         layouts: userLayouts as ILayoutType,
         pending,
         error: error || "",
-        setLayouts: (newLayout: ILayoutType) => setLayouts({ ...newLayout }),
-        getUserInfo: (userId: string) => getUserInfoById(userId),
-        setBio: (bio: IBioType) => setBio({ ...bio }),
-        setExperiences: (experience: IExperienceType[]) =>
-          setExperiences(experience),
-        setProjects: (projects: IProjectType[]) => setProjects(projects),
-        setSkills: (skills: ISkillType[]) => setSkills(skills),
-        setTestimonials: (testimonials: ITestimonialType[]) =>
-          setTestimonials(testimonials),
-        setContacts: (contacts: IContactType) => setContacts({ ...contacts }),
+        activeLanguage,
+        switchLanguage,
+        languages: languagesList,
+        footer,
+        setLayouts: (newLayout: ILayoutType) => setLayouts({ ...newLayout })
       }}
     >
       {children}

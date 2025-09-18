@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 import { Button } from "./ui/button";
-import Loader from "./loader";
 import { useTheme } from "@/contexts/ThemeProvider";
+
+import Loader from "./loader";
 
 interface SubmitButtonProps {
   children: ReactNode;
@@ -9,12 +10,12 @@ interface SubmitButtonProps {
   className?: string;
   onClickFunction?: () => void;
   variant?:
-    | string
-    | "outline"
-    | "default"
-    | "desctuctive"
-    | "secondary"
-    | undefined;
+  | string
+  | "outline"
+  | "default"
+  | "desctuctive"
+  | "secondary"
+  | undefined;
   loading?: boolean;
 }
 function SubmitButton({
@@ -39,14 +40,14 @@ function SubmitButton({
       className={`${className} min-w-32 max-w-full hover:opacity-75 duration-150 cursor-pointer disabled:bg-accent-foreground`}
       variant={
         variant as
-          | "outline"
-          | "default"
-          | "secondary"
-          | "link"
-          | "destructive"
-          | "ghost"
-          | null
-          | undefined
+        | "outline"
+        | "default"
+        | "secondary"
+        | "link"
+        | "destructive"
+        | "ghost"
+        | null
+        | undefined
       }
     >
       {loading ? <Loader size="sm" /> : children}

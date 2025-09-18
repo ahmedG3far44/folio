@@ -1,6 +1,4 @@
 import { IBioType, IContactType } from "@/lib/types";
-
-import { useAuth } from "@/contexts/AuthProvider";
 import { useTheme } from "@/contexts/ThemeProvider";
 
 import { Card } from "../ui/card";
@@ -17,10 +15,9 @@ function Hero({
   contacts: IContactType;
 }) {
   const { activeTheme } = useTheme();
-  const { isLogged } = useAuth();
   return (
     <>
-      {isLogged && <ChangeLayoutForm sectionName="heroLayout" />}
+      <ChangeLayoutForm sectionName="heroLayout" />
       <ApplyLayout type="parent" sectionName="heroLayout">
         <div className="flex flex-col justify-center items-center gap-8">
           <div className=" flex justify-around items-center gap-8 lg:gap-16 flex-wrap lg:flex-nowrap ">

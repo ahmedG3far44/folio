@@ -1,3 +1,4 @@
+import { LangType } from "@/contexts/UserProvider";
 import { ReactNode } from "react";
 
 export interface IUserType {
@@ -18,6 +19,8 @@ export interface IAuthContextType {
   logout: () => void;
 }
 
+
+
 export interface UserInfoContextType {
   bio: IBioType;
   experiences: IExperienceType[];
@@ -28,15 +31,18 @@ export interface UserInfoContextType {
   contacts: IContactType;
   pending: boolean;
   error: string;
+  activeLanguage: "en" | "es" | "ar";
+  languages: string[]
+  footer: {
+    text: string,
+    links: {
+      privacyPolicy: string;
+      termsOfService: string;
+      contact: string;
+    }
+  }
+  switchLanguage: (newLanguage: LangType) => void;
   setLayouts: (newLayout: ILayoutType) => void;
-  getUserInfo: (userId: string) => Promise<UserInfoContextType>;
-  // handleUserInfo: (id: string) => void;
-  setBio: (bio: IBioType) => void;
-  setExperiences: (newExperience: IExperienceType[]) => void;
-  setProjects: (newProjects: IProjectType[]) => void;
-  setSkills: (newSkill: ISkillType[]) => void;
-  setTestimonials: (newTestimonials: ITestimonialType[]) => void;
-  setContacts: (contacts: IContactType) => void;
 }
 
 export interface IBioType {
@@ -103,12 +109,6 @@ export interface IContactType {
   twitter: string;
 }
 
-export interface UploadFileType {
-  url: string | null;
-  size: number;
-  name: string;
-  type: string;
-}
 export interface IThemeType {
   id?: string;
   backgroundColor: string;
@@ -116,6 +116,12 @@ export interface IThemeType {
   primaryText: string;
   secondaryText: string;
   borderColor: string;
+}
+export interface UploadFileType {
+  url: string | null;
+  size: number;
+  name: string;
+  type: string;
 }
 
 export interface IFeatureType {

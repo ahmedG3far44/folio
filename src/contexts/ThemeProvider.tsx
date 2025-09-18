@@ -7,7 +7,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { useAuth } from "./AuthProvider";
 
 const URL_SERVER = import.meta.env.VITE_URL_SERVER as string;
 
@@ -24,7 +23,6 @@ const ThemeContext = createContext<ThemeContextType>({
   switchTheme: () => {},
 });
 const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { user } = useAuth();
   const theme = JSON.parse(localStorage.getItem("theme")!);
   const [activeTheme, setActiveTheme] = useState<IThemeType>(
     theme
@@ -42,7 +40,7 @@ const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     async function getThemesList() {
       try {
-        if (!user) return;
+      
         const response = await fetch(`${URL_SERVER}/theme`);
         if (!response.ok)
           throw new Error(
@@ -58,9 +56,8 @@ const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
         return;
       }
     }
-
     getThemesList();
-  }, [user]);
+  }, []);
   const switchTheme = ({ newActiveTheme }: { newActiveTheme: IThemeType }) => {
     console.log(newActiveTheme);
     localStorage.setItem("theme", JSON.stringify(newActiveTheme));
