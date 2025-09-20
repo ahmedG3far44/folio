@@ -20,20 +20,47 @@
                 {
                     "id": "1",
                     "cName": "TechCorp",
-                    "cLogo": "https://example.com/techcorp-logo.jpg",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
                     "position": "Senior Developer",
                     "duration": "2 years",
-                    "role": "Lead Developer",
+                    "role": "As a Lead Developer at TechCorp, I was responsible for overseeing the development of large-scale enterprise applications. I collaborated closely with cross-functional teams, mentored junior developers, and implemented best practices in software architecture, testing, and deployment to ensure high-quality, scalable solutions.",
                     "location": "New York"
                 },
                 {
                     "id": "2",
                     "cName": "WebSolutions",
-                    "cLogo": "https://example.com/websolutions-logo.jpg",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
                     "position": "Frontend Engineer",
                     "duration": "3 years",
-                    "role": "React Specialist",
+                    "role": "At WebSolutions, I specialized in building modern, responsive, and accessible user interfaces using React.js and Tailwind CSS. My role involved collaborating with designers, optimizing performance, and ensuring seamless user experiences across different platforms while contributing to design systems and reusable component libraries.",
                     "location": "Remote"
+                },
+                {
+                    "id": "3",
+                    "cName": "CloudNova",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
+                    "position": "Full Stack Developer",
+                    "duration": "1.5 years",
+                    "role": "At CloudNova, I worked on full-stack development projects, integrating cloud-based services with scalable backend systems. I designed RESTful APIs, implemented authentication and security protocols, and contributed to DevOps workflows to improve deployment pipelines and reduce downtime.",
+                    "location": "London, UK"
+                },
+                {
+                    "id": "4",
+                    "cName": "InnoTech",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                    "position": "Software Engineer",
+                    "duration": "2 years",
+                    "role": "During my time at InnoTech, I contributed to the development of SaaS applications, focusing on performance optimization and code quality. I played a key role in modernizing legacy systems by migrating them to modern frameworks and improving database efficiency, which significantly boosted application performance.",
+                    "location": "Berlin, Germany"
+                },
+                {
+                    "id": "5",
+                    "cName": "DataSphere",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
+                    "position": "Backend Engineer",
+                    "duration": "2.5 years",
+                    "role": "At DataSphere, my main focus was on building robust backend systems that could handle large-scale data processing. I worked extensively with databases, optimized query performance, and implemented microservices architecture, ensuring seamless integration between different data pipelines and client-facing APIs.",
+                    "location": "Toronto, Canada"
                 }
             ],
             "projects": [
@@ -188,20 +215,47 @@
                 {
                     "id": "1",
                     "cName": "TechCorp",
-                    "cLogo": "https://example.com/techcorp-logo.jpg",
-                    "position": "Desarrollador Senior",
-                    "duration": "2 años",
-                    "role": "Desarrollador Líder",
-                    "location": "Madrid"
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+                    "position": "Senior Developer",
+                    "duration": "2 years",
+                    "role": "Como Desarrollador Principal en TechCorp, fui responsable de supervisar el desarrollo de aplicaciones empresariales a gran escala. Colaboré estrechamente con equipos multifuncionales, brindé mentoría a desarrolladores junior e implementé buenas prácticas en arquitectura de software, pruebas y despliegue para garantizar soluciones escalables y de alta calidad.",
+                    "location": "New York"
                 },
                 {
                     "id": "2",
                     "cName": "WebSolutions",
-                    "cLogo": "https://example.com/websolutions-logo.jpg",
-                    "position": "Ingeniero Frontend",
-                    "duration": "3 años",
-                    "role": "Especialista en React",
-                    "location": "Remoto"
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+                    "position": "Frontend Engineer",
+                    "duration": "3 years",
+                    "role": "En WebSolutions me especialicé en la construcción de interfaces de usuario modernas, responsivas y accesibles utilizando React.js y Tailwind CSS. Mi función incluyó la colaboración con diseñadores, la optimización del rendimiento y la garantía de experiencias de usuario fluidas en diferentes plataformas, además de contribuir a sistemas de diseño y librerías de componentes reutilizables.",
+                    "location": "Remote"
+                },
+                {
+                    "id": "3",
+                    "cName": "CloudNova",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
+                    "position": "Full Stack Developer",
+                    "duration": "1.5 years",
+                    "role": "En CloudNova trabajé en proyectos de desarrollo full-stack, integrando servicios en la nube con sistemas backend escalables. Diseñé APIs RESTful, implementé protocolos de autenticación y seguridad, y contribuí a los flujos de trabajo de DevOps para mejorar los procesos de despliegue y reducir el tiempo de inactividad.",
+                    "location": "London, UK"
+                },
+                {
+                    "id": "4",
+                    "cName": "InnoTech",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                    "position": "Software Engineer",
+                    "duration": "2 years",
+                    "role": "Durante mi tiempo en InnoTech, contribuí al desarrollo de aplicaciones SaaS, centrándome en la optimización del rendimiento y la calidad del código. Jugué un papel clave en la modernización de sistemas heredados mediante su migración a frameworks modernos y la mejora de la eficiencia de bases de datos, lo que resultó en un notable aumento del rendimiento de las aplicaciones.",
+                    "location": "Berlin, Germany"
+                },
+                {
+                    "id": "5",
+                    "cName": "DataSphere",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
+                    "position": "Backend Engineer",
+                    "duration": "2.5 years",
+                    "role": "En DataSphere me enfoqué principalmente en construir sistemas backend robustos capaces de manejar procesamiento de datos a gran escala. Trabajé extensamente con bases de datos, optimicé el rendimiento de consultas e implementé una arquitectura de microservicios para asegurar una integración fluida entre pipelines de datos y APIs orientadas al cliente.",
+                    "location": "Toronto, Canada"
                 }
             ],
             "projects": [
@@ -288,17 +342,7 @@
                 "twitter": "https://twitter.com/juanperez",
                 "email": "juan.perez@ejemplo.com",
                 "website": "https://juanperez.dev"
-            },
-            "pending": false,
-            "error": "",
-            "setLayouts": "function",
-            "getUserInfo": "function",
-            "setBio": "function",
-            "setExperiences": "function",
-            "setProjects": "function",
-            "setSkills": "function",
-            "setTestimonials": "function",
-            "setContacts": "function"
+            }
         },
         "theme": {
             "backgroundColor": "#ffffff",
@@ -336,21 +380,48 @@
             "experiences": [
                 {
                     "id": "1",
-                    "cName": "تك كورب",
-                    "cLogo": "https://example.com/techcorp-logo.jpg",
-                    "position": "مطور أول",
-                    "duration": "سنتان",
-                    "role": "قائد فريق التطوير",
-                    "location": "القاهرة"
+                    "cName": "TechCorp",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+                    "position": "Senior Developer",
+                    "duration": "2 years",
+                    "role": "بصفتي مطورًا رئيسيًا في شركة TechCorp، كنت مسؤولاً عن الإشراف على تطوير تطبيقات مؤسسية واسعة النطاق. عملت بشكل وثيق مع فرق متعددة التخصصات، وقدمت التوجيه والإرشاد للمطورين المبتدئين، كما قمت بتطبيق أفضل الممارسات في هندسة البرمجيات، الاختبارات، والنشر لضمان حلول عالية الجودة وقابلة للتوسع.",
+                    "location": "New York"
                 },
                 {
                     "id": "2",
-                    "cName": "ويب سولوشنز",
-                    "cLogo": "https://example.com/websolutions-logo.jpg",
-                    "position": "مهندس واجهات أمامية",
-                    "duration": "٣ سنوات",
-                    "role": "متخصص React",
-                    "location": "عن بعد"
+                    "cName": "WebSolutions",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+                    "position": "Frontend Engineer",
+                    "duration": "3 years",
+                    "role": "في شركة WebSolutions، تخصصت في بناء واجهات مستخدم حديثة، متجاوبة، وسهلة الوصول باستخدام React.js و Tailwind CSS. شمل دوري التعاون مع المصممين، تحسين الأداء، وضمان تجربة مستخدم سلسة عبر المنصات المختلفة، بالإضافة إلى المساهمة في أنظمة التصميم وبناء مكتبات مكونات قابلة لإعادة الاستخدام.",
+                    "location": "Remote"
+                },
+                {
+                    "id": "3",
+                    "cName": "CloudNova",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
+                    "position": "Full Stack Developer",
+                    "duration": "1.5 years",
+                    "role": "في شركة CloudNova، عملت على مشاريع تطوير متكاملة، مدمجة مع خدمات سحابية قابلة للتوسع. قمت بتصميم واجهات برمجية (RESTful APIs)، وتطبيق بروتوكولات الأمان والمصادقة، وساهمت في تحسين سير عمل DevOps لتعزيز كفاءة خطوط النشر وتقليل وقت التوقف.",
+                    "location": "London, UK"
+                },
+                {
+                    "id": "4",
+                    "cName": "InnoTech",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                    "position": "Software Engineer",
+                    "duration": "2 years",
+                    "role": "خلال فترة عملي في InnoTech، ساهمت في تطوير تطبيقات SaaS مع التركيز على تحسين الأداء وجودة الكود. لعبت دورًا رئيسيًا في تحديث الأنظمة القديمة من خلال ترحيلها إلى أطر عمل حديثة وتحسين كفاءة قواعد البيانات، مما أدى إلى زيادة كبيرة في أداء التطبيقات.",
+                    "location": "Berlin, Germany"
+                },
+                {
+                    "id": "5",
+                    "cName": "DataSphere",
+                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
+                    "position": "Backend Engineer",
+                    "duration": "2.5 years",
+                    "role": "في شركة DataSphere، كان تركيزي الرئيسي على بناء أنظمة خلفية قوية قادرة على معالجة البيانات على نطاق واسع. عملت بشكل مكثف مع قواعد البيانات، وقمت بتحسين أداء الاستعلامات، كما نفذت بنية قائمة على الميكروسيرفس لضمان تكامل سلس بين خطوط معالجة البيانات وواجهات برمجية موجهة للمستخدمين.",
+                    "location": "Toronto, Canada"
                 }
             ],
             "projects": [

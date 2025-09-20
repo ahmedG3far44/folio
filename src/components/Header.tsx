@@ -3,11 +3,13 @@ import { LangType, useUser } from "@/contexts/UserProvider";
 
 
 import Logo from "./Logo";
+import { useTheme } from "@/contexts/ThemeProvider";
 
 
 function Header() {
   const [isScroll, setScroll] = useState(false);
   const { languages, switchLanguage } = useUser()
+  const { activeTheme } = useTheme()
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 20) setScroll(window.scrollY > 20 ? true : false);
@@ -16,8 +18,9 @@ function Header() {
 
   return (
     <div
+      style={{ backgroundColor: activeTheme.backgroundColor }}
       className={`${isScroll && " border-b border-red-500 z-[999]"
-        } w-full border-b-0 flex justify-between items-center px-4 py-8 sticky top-0 z-[999]`}
+        } w-full border-b-0 flex justify-between items-center px-4 py-8 sticky top-0 z-[999] `}
     >
       <Logo />
 

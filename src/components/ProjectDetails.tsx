@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { useTheme } from "@/contexts/ThemeProvider";
 import { Link, useParams } from "react-router-dom";
-import { ExternalLink, Undo2 } from "lucide-react";
+import {  ExternalLink, Undo2 } from "lucide-react";
 
 import { useUser } from "@/contexts/UserProvider";
 
@@ -11,8 +11,10 @@ function ProjectDetails() {
   const { activeTheme } = useTheme();
   const { projectId } = useParams();
   const { projects } = useUser();
-  const project = projects.filter((project) => project.id.toString() === projectId?.toString());
-  
+  const project = projects.find((project) => project.id.toString() === projectId?.toString());
+
+  console.log(project)
+
   return (
     <div
       style={{
