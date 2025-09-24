@@ -62,7 +62,7 @@ export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const footer = userData[activeLanguage].footer;
   const testimonials = userData[activeLanguage].userInfoContext.testimonials.map(t => ({ ...t, createdAt: new Date(t.createdAt) })) as ITestimonialType[];
-  const [userLayouts, setLayouts] = useState<ILayoutType>({
+  const [userLayouts, setLayouts] = useState<ILayoutType>(JSON.parse(localStorage.getItem("layouts") as string) || {
     id: "1",
     heroLayout: "1",
     expLayout: "1",

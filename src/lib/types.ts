@@ -111,6 +111,7 @@ export interface IContactType {
 
 export interface IThemeType {
   id?: string;
+  themeName: string;
   backgroundColor: string;
   cardColor: string;
   primaryText: string;

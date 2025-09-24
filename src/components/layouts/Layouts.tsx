@@ -1,5 +1,5 @@
 import { ReactNode, ChangeEvent, FormEvent, useState } from "react";
-import { IActiveLayout } from "@/lib/types";
+import { IActiveLayout, ILayoutType } from "@/lib/types";
 
 import { useUser } from "@/contexts/UserProvider";
 import { useTheme } from "@/contexts/ThemeProvider";
@@ -7,6 +7,7 @@ import { useTheme } from "@/contexts/ThemeProvider";
 import toast from "react-hot-toast";
 import SubmitButton from "../submit-button";
 import layoutJson from "@/lib/layouts.json";
+import { CloudCog } from "lucide-react";
 
 
 const URL_SERVER = import.meta.env.VITE_URL_SERVER as string;
@@ -151,38 +152,25 @@ export const ChangeLayoutForm = ({ sectionName }: { sectionName: string }) => {
   const [pending] = useState<boolean>(false);
   const { layouts, setLayouts } = useUser();
   const { heroLayout, expLayout, projectsLayout, skillsLayout } = layouts;
-  // const handleChangeLayout = async (e: FormEvent) => {
-  //   e.preventDefault();
-  //   try {
-  //     if (!layouts) return;
+  const handleChangeLayout = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      if (!layouts) return;
+      console.log(layouts)
+      
+      localStorage.setItem("layouts", JSON.stringify(layouts))
+      toast.success("layout changed success");
+      return;
+    } catch (err) {
+      console.log((err as Error).message);
+      toast.error((err as Error).message);
+      return;
+    }
 
-  //     setPending(true);
-  //     const response = await fetch(`${URL_SERVER}/layouts/${layouts?.id}`, {
-  //       method: "PUT",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //       body: JSON.stringify(layouts),
-  //     });
-  //     if (!response.ok) {
-  //       throw new Error("change layout failed");
-  //     }
-  //     const data = await response.json();
-  //     toast.success("layout changed success");
-  //     return data;
-  //   } catch (err) {
-  //     console.log((err as Error).message);
-  //     toast.error((err as Error).message);
-  //     return;
-  //   } finally {
-  //     console.log("finall");
-  //     setPending(false);
-  //   }
-  // };
+  };
   return (
     <form
-      onSubmit={() => { }}
+      onSubmit={handleChangeLayout}
       className="w-3/4 lg:w-[30%] ml-auto flex justify-end items-center gap-4 lg:gap-2  "
     >
       <select

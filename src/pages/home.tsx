@@ -12,6 +12,7 @@ import SkillSection from "@/components/sections/SkillSection";
 import ProjectSection from "@/components/sections/ProjectSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
+import ThemeSelector, { Popup } from "@/components/sections/ThemeSelector";
 
 
 function Home() {
@@ -37,6 +38,9 @@ function Home() {
       }}
       className="w-full min-h-screen flex flex-col justify-between items-center"
     >
+      <Popup>
+        <ThemeSelector />
+      </Popup>
       <div className="max-w-full w-full lg:w-3/4  m-auto min-h-screen  flex flex-col gap-4 ">
 
         <>
