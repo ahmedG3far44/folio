@@ -4,11 +4,13 @@ import { LangType, useUser } from "@/contexts/UserProvider";
 
 import Logo from "./Logo";
 import { useTheme } from "@/contexts/ThemeProvider";
+import { Button } from "./ui/button";
+import { LucideEdit, LucideSun, LucideX } from "lucide-react";
 
 
-function Header() {
+function Header({ setOpen }: { setOpen: (open: boolean) => void }) {
   const [isScroll, setScroll] = useState(false);
-  const { languages, switchLanguage } = useUser()
+  const { languages, switchLanguage, setEditState, editState } = useUser()
   const { activeTheme } = useTheme()
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -24,13 +26,23 @@ function Header() {
     >
       <Logo />
 
-      <select className="p-2 rounded-md appearance-none bg-zinc-800 hover:bg-zinc-900 cursor-pointer  duration-300 text-center w-[100px] border-none" onChange={(e: ChangeEvent<HTMLSelectElement>) => switchLanguage(e.target.value as LangType)} name="languages" id="languages">
-        {
-          languages.map((lang, index) => {
-            return <option key={index} value={lang.toLocaleLowerCase()}>{lang}</option>
-          })
-        }
-      </select>
+      <div className="flex items-center justify-center gap-4">
+        <Button onClick={() => setEditState(!editState)}>
+          {!editState ? <LucideEdit size={25} /> : <LucideX size={25} />}
+        </Button>
+        <Button onClick={() => setOpen(true)}>
+          <LucideSun size={25} />
+        </Button>
+        <select
+          style={{ backgroundColor: activeTheme.cardColor, borderColor: activeTheme.borderColor }}
+          className="p-2 rounded-md appearance-none  hover:opacity-90 cursor-pointer  duration-300 text-center w-[100px] border-none" onChange={(e: ChangeEvent<HTMLSelectElement>) => switchLanguage(e.target.value as LangType)} name="languages" id="languages">
+          {
+            languages.map((lang, index) => {
+              return <option className="px-4 py-2 " style={{ color: activeTheme.cardColor }} key={index} value={lang.toLocaleLowerCase()}>{lang}</option>
+            })
+          }
+        </select>
+      </div>
     </div>
   );
 }

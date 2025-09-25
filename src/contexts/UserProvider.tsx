@@ -37,6 +37,8 @@ export const UserContext = createContext<UserInfoContextType>({
     youtube: "",
     twitter: "",
   },
+  editState: false,
+  setEditState: () => { },
   pending: false,
   error: "",
   languages: [],
@@ -57,6 +59,7 @@ export type LangType = keyof typeof userData;
 
 export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
   const [languagesList] = useState<string[]>(Object.keys(userData))
+  const [editState, setEditState] = useState<boolean>(false)
   const [activeLanguage, setActiveLanguage] = useState<LangType>("en")
   const { bio, projects, contacts, experiences, skills } = userData[activeLanguage].userInfoContext;
 
@@ -85,6 +88,8 @@ export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
         testimonials: testimonials || [],
         contacts: contacts as IContactType,
         layouts: userLayouts as ILayoutType,
+        editState,
+        setEditState,
         pending,
         error: error || "",
         activeLanguage,

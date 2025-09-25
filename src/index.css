@@ -118,32 +118,42 @@ html {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
+/* @layer{
+  
+} */
 .animate-scale {
   animation: scale 0.3s ease-in-out forwards;
 }
+
 .animate-slide-in {
   animation: slide-in 0.3s ease-in-out forwards;
   max-width: 25%;
 }
+
 .animate-around {
   animation: around-in 10s ease-in-out forwards infinite;
 }
+
 .animate-around-back {
   animation: around-out 10s ease-in-out backwards infinite;
 }
+
 .animate-scale-smooth {
-  animation: scale-smooth 1s ease-in-out forwards 6;
+  animation: scale-smooth 0.4s ease-in-out forwards;
 }
+
 .animate-fade {
   animation: fade 1s ease-in-out forwards;
 }
+
 .animate-fade-reverse {
-  animation: fade-reverse 1s ease-in-out forwards ;
+  animation: fade-reverse 1s ease-in-out forwards;
 }
 
 @keyframes scale {
@@ -151,10 +161,12 @@ html {
     opacity: 0;
     transform: scale(0.5);
   }
+
   50% {
     opacity: 0.7;
     transform: scale(1.2);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -168,6 +180,7 @@ html {
     transform: translateX(-100%);
     /* height: 0%; */
   }
+
   to {
     opacity: 1;
     width: 100%;
@@ -176,37 +189,45 @@ html {
     /* height: auto; */
   }
 }
+
 @keyframes around-in {
   0% {
     transform: translateX(20%);
     transform: translateY(20%);
   }
+
   25% {
     transform: translateX(50%);
     transform: translateY(50%);
   }
+
   50% {
     transform: translateX(50%);
     transform: translateY(50%);
   }
+
   100% {
     transform: translateX(20%);
     transform: translateY(20%);
   }
 }
+
 @keyframes around-out {
   0% {
     transform: translateX(-20%);
     transform: translateY(-20%);
   }
+
   25% {
     transform: translateX(-50%);
     transform: translateY(-50%);
   }
+
   50% {
     transform: translateX(-50%);
     transform: translateY(-50%);
   }
+
   100% {
     transform: translateX(-20%);
     transform: translateY(-20%);
@@ -219,35 +240,35 @@ html {
     opacity: 0;
     height: 0;
   }
-  50% {
-    scale: 1.1;
-    opacity: 1;
-    height: auto;
-  }
+
   100% {
     scale: 1;
     opacity: 1;
-    height: auto;
+    height: 100vh;
   }
 }
+
 @keyframes fade {
   0% {
     opacity: 0;
     right: 0;
     top: 35%;
   }
+
   100% {
     opacity: 1;
     right: -200px;
     top: 35%;
   }
 }
+
 @keyframes fade-reverse {
   0% {
     opacity: 0;
     left: 0px;
     top: 35%;
   }
+
   100% {
     opacity: 1;
     left: -200px;

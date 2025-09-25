@@ -12,11 +12,14 @@ import SkillSection from "@/components/sections/SkillSection";
 import ProjectSection from "@/components/sections/ProjectSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
-import ThemeSelector, { Popup } from "@/components/sections/ThemeSelector";
+import { Popup } from "@/components/sections/Popup";
+import ThemeCard from "@/components/cards/ThemeCard";
+import SuccessMessageToast from "@/components/cards/SuccessMessageToast";
+import { BadgeCheck, LucideAirVent } from "lucide-react";
 
 
 function Home() {
-  const { activeTheme } = useTheme();
+  const { activeTheme, themesList, switchTheme } = useTheme();
   const {
     bio,
     experiences,
@@ -27,6 +30,8 @@ function Home() {
   } = useUser();
   const [pending,] = useState(false);
   const [error,] = useState<string | null>(null);
+  const [isOpen, setOpen] = useState<boolean>(false);
+
 
   if (error) return <ErrorMessage message={error} />;
 
@@ -38,8 +43,22 @@ function Home() {
       }}
       className="w-full min-h-screen flex flex-col justify-between items-center"
     >
-      <Popup>
-        <ThemeSelector />
+    
+      <Popup isOpen={isOpen} setOpen={setOpen}>
+        <div className="p-2 grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-cols-1 items-center justify-center gap-4">
+          {
+            themesList.map(({ backgroundColor, cardColor, borderColor, primaryText, secondaryText, themeName, id }) => {
+              return <div role="button"
+
+                onClick={() => switchTheme({ newActiveTheme: { id, themeName, backgroundColor, cardColor, borderColor, primaryText, secondaryText } })}
+
+                aria-disabled={(activeTheme.id?.toString() === id?.toString() && activeTheme.themeName === themeName)}
+                className={`p-4 flex justify-center items-center  disabled:cursor-not-allowed rounded-md ${(activeTheme.id?.toString() === id?.toString() && activeTheme.themeName === themeName) ? "border-2 border-blue-500 rounded-md cursor-not-allowed bg-blue-500" : "cursor-pointer hover:scale-95 duration-300 bg-zinc-700"}`}>
+                <ThemeCard key={id} backgroundColor={backgroundColor} cardColor={cardColor} borderColor={borderColor} primaryText={primaryText} secondaryText={secondaryText} themeName={themeName} />
+              </div>
+            })
+          }
+        </div>
       </Popup>
       <div className="max-w-full w-full lg:w-3/4  m-auto min-h-screen  flex flex-col gap-4 ">
 
@@ -50,7 +69,7 @@ function Home() {
             </div>
           ) : (
             <div className="w-full flex flex-col items-center justify-around gap-20 p-4 lg:p-8">
-              <Header />
+              <Header setOpen={setOpen} />
               <Hero bioInfo={bio} contacts={contacts} />
               <ExperienceSection experiences={experiences} />
               <ProjectSection projects={projects} />

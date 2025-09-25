@@ -8,15 +8,20 @@ import ThemeProvider from "./contexts/ThemeProvider.tsx";
 
 import App from "./App.tsx";
 import "./index.css";
+import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-        <ThemeProvider>
-          <UserProvider>
-            <App />
-          </UserProvider>
-        </ThemeProvider>
+      <ThemeProvider>
+        <UserProvider>
+          <Toaster
+            position="bottom-center"
+            reverseOrder={false}
+          />
+          <App />
+        </UserProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
 );

@@ -7,7 +7,8 @@ import { useTheme } from "@/contexts/ThemeProvider";
 import toast from "react-hot-toast";
 import SubmitButton from "../submit-button";
 import layoutJson from "@/lib/layouts.json";
-import { CloudCog } from "lucide-react";
+import { BadgeCheck, CloudCog, LucideAirVent } from "lucide-react";
+import SuccessMessageToast from "../cards/SuccessMessageToast";
 
 
 const URL_SERVER = import.meta.env.VITE_URL_SERVER as string;
@@ -150,16 +151,19 @@ export const ApplyLayout = ({
 export const ChangeLayoutForm = ({ sectionName }: { sectionName: string }) => {
   const { activeTheme } = useTheme();
   const [pending] = useState<boolean>(false);
-  const { layouts, setLayouts } = useUser();
+  const { layouts, setLayouts, setEditState } = useUser();
   const { heroLayout, expLayout, projectsLayout, skillsLayout } = layouts;
   const handleChangeLayout = async (e: FormEvent) => {
     e.preventDefault();
     try {
       if (!layouts) return;
       console.log(layouts)
-      
+
       localStorage.setItem("layouts", JSON.stringify(layouts))
-      toast.success("layout changed success");
+      toast.custom((t) => (
+        <SuccessMessageToast visible={true} title="Saved layouts changes" message="the layout changes saved success!!" icon={<BadgeCheck size={25} />} />
+      ))
+      setEditState(false)
       return;
     } catch (err) {
       console.log((err as Error).message);

@@ -4,15 +4,16 @@ import { ApplyLayout, ChangeLayoutForm } from "../layouts/Layouts";
 
 
 import SkillCard from "../cards/SkillCard";
+import { useUser } from "@/contexts/UserProvider";
 
 
 
 
 function SkillSection({ skills }: { skills: ISkillType[] }) {
-
+  const { editState } = useUser()
   return (
     <>
-      <ChangeLayoutForm sectionName="skillsLayout" />
+      {editState && <ChangeLayoutForm sectionName="skillsLayout" />}
 
       {skills.length > 0 ? (
         <ApplyLayout sectionName="skillsLayout" type="parent" >

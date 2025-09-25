@@ -3,6 +3,7 @@ import { ApplyLayout, ChangeLayoutForm } from "../layouts/Layouts";
 
 
 import ExperienceCard from "../cards/ExperienceCard";
+import { useUser } from "@/contexts/UserProvider";
 
 
 function ExperienceSection({
@@ -10,9 +11,10 @@ function ExperienceSection({
 }: {
   experiences: IExperienceType[];
 }) {
+  const { editState } = useUser()
   return (
     <>
-      <ChangeLayoutForm sectionName={"expLayout"} />
+      {editState && <ChangeLayoutForm sectionName={"expLayout"} />}
       {experiences.length > 0 ? (
         <ApplyLayout sectionName="expLayout" type="parent">
           {experiences.map((exp: IExperienceType) => {

@@ -29,6 +29,8 @@ export interface UserInfoContextType {
   testimonials: ITestimonialType[];
   layouts: ILayoutType;
   contacts: IContactType;
+  setEditState: (state: boolean) => void;
+  editState: boolean;
   pending: boolean;
   error: string;
   activeLanguage: "en" | "es" | "ar";

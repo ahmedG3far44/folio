@@ -6,6 +6,7 @@ import { Card } from "../ui/card";
 import Resume from "../cards/Resume";
 import ShowUserContacts from "../cards/ShowUserContacts";
 import { ApplyLayout, ChangeLayoutForm } from "../layouts/Layouts";
+import { useUser } from "@/contexts/UserProvider";
 
 function Hero({
   bioInfo,
@@ -15,9 +16,10 @@ function Hero({
   contacts: IContactType;
 }) {
   const { activeTheme } = useTheme();
+  const { editState } = useUser();
   return (
     <>
-      <ChangeLayoutForm sectionName="heroLayout" />
+      {editState && <ChangeLayoutForm sectionName="heroLayout" />}
       <ApplyLayout type="parent" sectionName="heroLayout">
         <div className="flex flex-col justify-center items-center gap-8">
           <div className=" flex justify-around items-center gap-8 lg:gap-16 flex-wrap lg:flex-nowrap ">

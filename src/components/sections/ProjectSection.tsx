@@ -3,14 +3,15 @@ import { ApplyLayout, ChangeLayoutForm } from "../layouts/Layouts";
 
 
 import ProjectCard from "../cards/ProjectCard";
+import { useUser } from "@/contexts/UserProvider";
 
 
 function ProjectSection({ projects }: { projects: IProjectType[] }) {
 
-
+  const { editState } = useUser()
   return (
     <>
-      <ChangeLayoutForm sectionName="projectsLayout" />
+      {editState && <ChangeLayoutForm sectionName="projectsLayout" />}
 
       {projects.length > 0 ? (
         <ApplyLayout type="parent" sectionName={"projectsLayout"}>

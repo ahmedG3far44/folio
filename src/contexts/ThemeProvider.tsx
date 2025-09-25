@@ -20,7 +20,25 @@ const ThemeContext = createContext<ThemeContextType>({
     secondaryText: "#B8C4B9",
     borderColor: "#4E7D53",
   },
-  themesList: [
+  themesList: [],
+  switchTheme: () => { },
+});
+const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
+  const savedTheme = JSON.parse(localStorage.getItem("theme") as string);
+  const [activeTheme, setActiveTheme] = useState<IThemeType>(
+    savedTheme
+      ? savedTheme
+      : {
+        id: "1",
+        backgroundColor: "#09090B",
+        cardColor: "#18181B",
+        primaryText: "#E2E2E5",
+        secondaryText: "#A1A1AA",
+        borderColor: "#27272A",
+      }
+  );
+
+  const [themesList, setThemesList] = useState<IThemeType[] | []>([
     {
       id: "1",
       themeName: "Green Theme",
@@ -201,25 +219,7 @@ const ThemeContext = createContext<ThemeContextType>({
       secondaryText: "#A3E635",
       borderColor: "#84CC16"
     }
-  ],
-  switchTheme: () => { },
-});
-const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
-  const savedTheme = JSON.parse(localStorage.getItem("theme") as string);
-  const [activeTheme, setActiveTheme] = useState<IThemeType>(
-    savedTheme
-      ? savedTheme
-      : {
-        id: "1",
-        backgroundColor: "#09090B",
-        cardColor: "#18181B",
-        primaryText: "#E2E2E5",
-        secondaryText: "#A1A1AA",
-        borderColor: "#27272A",
-      }
-  );
-
-  const [themesList, setThemesList] = useState<IThemeType[] | []>([]);
+  ]);
   useEffect(() => {
     async function getThemesList() {
       try {
