@@ -1,19 +1,15 @@
 import { ReactNode, ChangeEvent, FormEvent, useState } from "react";
-import { IActiveLayout, ILayoutType } from "@/lib/types";
+import { IActiveLayout } from "@/lib/types";
 
 import { useUser } from "@/contexts/UserProvider";
 import { useTheme } from "@/contexts/ThemeProvider";
 
+import { BadgeCheck } from "lucide-react";
+
 import toast from "react-hot-toast";
 import SubmitButton from "../submit-button";
 import layoutJson from "@/lib/layouts.json";
-import { BadgeCheck, CloudCog, LucideAirVent } from "lucide-react";
 import SuccessMessageToast from "../cards/SuccessMessageToast";
-
-
-const URL_SERVER = import.meta.env.VITE_URL_SERVER as string;
-
-
 
 export const ApplyLayout = ({
   sectionName,
@@ -23,11 +19,11 @@ export const ApplyLayout = ({
   children: ReactNode;
   type: string | "parent" | "child";
   sectionName:
-  | string
-  | "heroLayout"
-  | "expLayout"
-  | "projectsLayout"
-  | "skillsLayout";
+    | string
+    | "heroLayout"
+    | "expLayout"
+    | "projectsLayout"
+    | "skillsLayout";
 }) => {
   const { layouts } = useUser();
   const { heroLayout, expLayout, projectsLayout, skillsLayout } = layoutJson;
@@ -58,95 +54,95 @@ export const ApplyLayout = ({
               ? parent.default
               : child.default
             : layouts?.heroLayout === "2"
-              ? type === "parent"
-                ? parent.medium
-                : child.medium
-              : layouts?.heroLayout === "3"
-                ? type === "parent"
-                  ? parent.minimal
-                  : child.minimal
-                : layouts?.heroLayout === "4"
-                  ? type === "parent"
-                    ? parent.wizzard
-                    : child.wizzard
-                  : layouts?.heroLayout === "5"
-                    ? type === "parent"
-                      ? parent.accent
-                      : child.accent
-                    : "1"
+            ? type === "parent"
+              ? parent.medium
+              : child.medium
+            : layouts?.heroLayout === "3"
+            ? type === "parent"
+              ? parent.minimal
+              : child.minimal
+            : layouts?.heroLayout === "4"
+            ? type === "parent"
+              ? parent.wizard
+              : child.wizard
+            : layouts?.heroLayout === "5"
+            ? type === "parent"
+              ? parent.accent
+              : child.accent
+            : "1"
           : sectionName === "expLayout"
-            ? layouts?.expLayout === "1"
-              ? type === "parent"
-                ? parent.default
-                : child.default
-              : layouts?.expLayout === "2"
-                ? type === "parent"
-                  ? parent.medium
-                  : child.medium
-                : layouts?.expLayout === "3"
-                  ? type === "parent"
-                    ? parent.minimal
-                    : child.minimal
-                  : layouts?.expLayout === "4"
-                    ? type === "parent"
-                      ? parent.wizzard
-                      : child.wizzard
-                    : layouts?.expLayout === "5"
-                      ? type === "parent"
-                        ? parent.accent
-                        : child.accent
-                      : "1"
-            : sectionName === "projectsLayout"
-              ? layouts?.projectsLayout === "1"
-                ? type === "parent"
-                  ? parent.default
-                  : child.default
-                : layouts?.projectsLayout === "2"
-                  ? type === "parent"
-                    ? parent.medium
-                    : child.medium
-                  : layouts?.projectsLayout === "3"
-                    ? type === "parent"
-                      ? parent.minimal
-                      : child.minimal
-                    : layouts?.projectsLayout === "4"
-                      ? type === "parent"
-                        ? parent.wizzard
-                        : child.wizzard
-                      : layouts?.projectsLayout === "5"
-                        ? type === "parent"
-                          ? parent.accent
-                          : child.accent
-                        : "1"
-              : sectionName === "skillsLayout"
-                ? layouts?.skillsLayout === "1"
-                  ? type === "parent"
-                    ? parent.default
-                    : child.default
-                  : layouts?.skillsLayout === "2"
-                    ? type === "parent"
-                      ? parent.medium
-                      : child.medium
-                    : layouts?.skillsLayout === "3"
-                      ? type === "parent"
-                        ? parent.minimal
-                        : child.minimal
-                      : layouts?.skillsLayout === "4"
-                        ? type === "parent"
-                          ? parent.wizzard
-                          : child.wizzard
-                        : layouts?.skillsLayout === "5"
-                          ? type === "parent"
-                            ? parent.accent
-                            : child.accent
-                          : "1"
-                : "1"
+          ? layouts?.expLayout === "1"
+            ? type === "parent"
+              ? parent.default
+              : child.default
+            : layouts?.expLayout === "2"
+            ? type === "parent"
+              ? parent.medium
+              : child.medium
+            : layouts?.expLayout === "3"
+            ? type === "parent"
+              ? parent.minimal
+              : child.minimal
+            : layouts?.expLayout === "4"
+            ? type === "parent"
+              ? parent.wizard
+              : child.wizard
+            : layouts?.expLayout === "5"
+            ? type === "parent"
+              ? parent.accent
+              : child.accent
+            : "1"
+          : sectionName === "projectsLayout"
+          ? layouts?.projectsLayout === "1"
+            ? type === "parent"
+              ? parent.default
+              : child.default
+            : layouts?.projectsLayout === "2"
+            ? type === "parent"
+              ? parent.medium
+              : child.medium
+            : layouts?.projectsLayout === "3"
+            ? type === "parent"
+              ? parent.minimal
+              : child.minimal
+            : layouts?.projectsLayout === "4"
+            ? type === "parent"
+              ? parent.wizard
+              : child.wizard
+            : layouts?.projectsLayout === "5"
+            ? type === "parent"
+              ? parent.accent
+              : child.accent
+            : "1"
+          : sectionName === "skillsLayout"
+          ? layouts?.skillsLayout === "1"
+            ? type === "parent"
+              ? parent.default
+              : child.default
+            : layouts?.skillsLayout === "2"
+            ? type === "parent"
+              ? parent.medium
+              : child.medium
+            : layouts?.skillsLayout === "3"
+            ? type === "parent"
+              ? parent.minimal
+              : child.minimal
+            : layouts?.skillsLayout === "4"
+            ? type === "parent"
+              ? parent.wizard
+              : child.wizard
+            : layouts?.skillsLayout === "5"
+            ? type === "parent"
+              ? parent.accent
+              : child.accent
+            : "1"
+          : "1"
       }
     >
       {children}
     </div>
   );
-}
+};
 
 export const ChangeLayoutForm = ({ sectionName }: { sectionName: string }) => {
   const { activeTheme } = useTheme();
@@ -157,20 +153,24 @@ export const ChangeLayoutForm = ({ sectionName }: { sectionName: string }) => {
     e.preventDefault();
     try {
       if (!layouts) return;
-      console.log(layouts)
+      console.log(layouts);
 
-      localStorage.setItem("layouts", JSON.stringify(layouts))
+      localStorage.setItem("layouts", JSON.stringify(layouts));
       toast.custom((t) => (
-        <SuccessMessageToast visible={true} title="Saved layouts changes" message="the layout changes saved success!!" icon={<BadgeCheck size={25} />} />
-      ))
-      setEditState(false)
+        <SuccessMessageToast
+          visible={true}
+          title="Saved layouts changes"
+          message={(t?.message as string) || "layouts updated successfully"}
+          icon={<BadgeCheck size={25} />}
+        />
+      ));
+      setEditState(false);
       return;
     } catch (err) {
       console.log((err as Error).message);
       toast.error((err as Error).message);
       return;
     }
-
   };
   return (
     <form
@@ -182,12 +182,12 @@ export const ChangeLayoutForm = ({ sectionName }: { sectionName: string }) => {
           layouts && sectionName === "heroLayout"
             ? heroLayout
             : sectionName === "projectsLayout"
-              ? projectsLayout
-              : sectionName === "expLayout"
-                ? expLayout
-                : sectionName === "skillsLayout"
-                  ? skillsLayout
-                  : ""
+            ? projectsLayout
+            : sectionName === "expLayout"
+            ? expLayout
+            : sectionName === "skillsLayout"
+            ? skillsLayout
+            : ""
         }
         onChange={(e: ChangeEvent<HTMLSelectElement>) => {
           if (e.target) {
@@ -209,7 +209,7 @@ export const ChangeLayoutForm = ({ sectionName }: { sectionName: string }) => {
         <option value="1">Default</option>
         <option value="2">Medium</option>
         <option value="3">Minimal</option>
-        <option value="4">Wizzard</option>
+        <option value="4">wizard</option>
         <option value="5">Accent</option>
       </select>
       <SubmitButton loading={pending} type="submit">

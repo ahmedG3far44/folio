@@ -1,21 +1,15 @@
-import { useState } from "react";
+
 import { Button } from "../ui/button";
 import { useTheme } from "@/contexts/ThemeProvider";
-import Loader from "../loader";
-import { deleteById } from "@/lib/handlers";
-import toast from "react-hot-toast";
-// import { ISkillType } from "@/lib/types";
-// import { useNavigate } from "react-router-dom";
+
+
 
 function ShowListCard({
-  id,
-  sectionName,
   image,
   title,
   position,
   feedback,
   vertical,
-  setUpdate,
 }: {
   sectionName: string;
   id: string;
@@ -27,50 +21,7 @@ function ShowListCard({
   setUpdate?: () => void;
 }) {
   const { activeTheme } = useTheme();
-  // const navigate = useNavigate();
-  const [pending, setPending] = useState<boolean>(false);
-  // const handleDelete = async (id: string) => {
-  //   try {
-  //     setPending(true);
-  //     const deleteResult = await deleteById({
-  //       id,
-  //       token,
-  //       deleteRoute: sectionName,
-  //     });
-  //     toast.success(deleteResult.message);
-  //     return;
-  //   } catch (err) {
-  //     console.log((err as Error).message);
-  //     return;
-  //   } finally {
-  //     setPending(false);
-  //   }
-  // };
-  // const handleUpdate = async (id: string) => {
-  //   try {
-  //     setPending(true);
-  //     switch (sectionName) {
-  //       case "experiences":
-  //         console.log("update experience ", id);
-  //         break;
-  //       case "projects":
-  //         console.log("update project ", id);
-  //         break;
-  //       case "skills":
-  //         console.log("update skills ", id);
-  //         break;
-  //       case "testimonials":
-  //         console.log("update testimonials ", id);
-  //         break;
-  //       default:
-  //         break;
-  //     }
-  //   } catch (err) {
-  //     console.log((err as Error).message);
-  //   } finally {
-  //     setPending(false);
-  //   }
-  // };
+
   return (
     <div
       style={{
@@ -109,23 +60,12 @@ function ShowListCard({
       </div>
       {feedback && <p className="line-clamp-3 my-2">{feedback}</p>}
       <div className="space-x-2 lg:space-x-4">
-        {sectionName !== "feedback" && (
-          <Button
-            className="disabled:cursor-not-allowed"
-            type="button"
-            disabled={pending}
-            onClick={setUpdate}
-          >
-            update
-          </Button>
-        )}
         <Button
           className="disabled:cursor-not-allowed"
           type="button"
-          disabled={pending}
-          onClick={() => { }}
+          variant="destructive" 
         >
-          {pending ? <Loader size="sm" /> : "delete"}
+          delete
         </Button>
       </div>
     </div>

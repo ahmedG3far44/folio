@@ -19,8 +19,6 @@ export interface IAuthContextType {
   logout: () => void;
 }
 
-
-
 export interface UserInfoContextType {
   bio: IBioType;
   experiences: IExperienceType[];
@@ -34,15 +32,15 @@ export interface UserInfoContextType {
   pending: boolean;
   error: string;
   activeLanguage: "en" | "es" | "ar";
-  languages: string[]
+  languages: string[];
   footer: {
-    text: string,
+    text: string;
     links: {
       privacyPolicy: string;
       termsOfService: string;
       contact: string;
-    }
-  }
+    };
+  };
   switchLanguage: (newLanguage: LangType) => void;
   setLayouts: (newLayout: ILayoutType) => void;
 }
@@ -144,14 +142,14 @@ export interface IActiveLayout {
     default: string;
     medium: string;
     minimal: string;
-    wizzard: string;
+    wizard: string;
     accent: string;
   };
   child: {
     default: string;
     medium: string;
     minimal: string;
-    wizzard: string;
+    wizard: string;
     accent: string;
   };
 }
