@@ -7,7 +7,9 @@ import { BrowserRouter } from "react-router-dom";
 import ThemeProvider from "./contexts/ThemeProvider.tsx";
 
 import App from "./App.tsx";
+
 import "./index.css";
+
 import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById("root")!).render(
