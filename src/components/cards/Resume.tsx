@@ -4,9 +4,12 @@ import { Button } from "../ui/button";
 import { useTheme } from "@/contexts/ThemeProvider";
 
 
-function Resume() {
+
+
+function Resume({className}: {className?: string}) {
   const { activeTheme } = useTheme();
-  const resumeUrl = `url`;
+  
+const resumeUrl = `user?.resume`; 
 
   return (
     <>
@@ -17,11 +20,12 @@ function Resume() {
             style={{
               backgroundColor: activeTheme.cardColor,
               color: activeTheme.primaryText,
+              border: `1px solid ${activeTheme.borderColor}`,
             }}
-            className="w-full cursor-pointer hover:opacity-75 duration-150"
+            className={`${className} w-full cursor-pointer  hover:opacity-75 duration-150`}
           >
             <Link target="_blank" to={resumeUrl} download={resumeUrl}>
-              Resume
+              Download Resume
             </Link>
           </Button>
         )}

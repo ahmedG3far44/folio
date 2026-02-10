@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function ShowUserContacts({ contacts }: { contacts?: IContactType }) {
   const { activeTheme } = useTheme();
   return (
-    <div className="flex justify-start items-start gap-2">
+    <div className="flex justify-center items-center gap-4">
       {/* {contacts?.id} */}
       {contacts?.github && (
         <ContactIcon

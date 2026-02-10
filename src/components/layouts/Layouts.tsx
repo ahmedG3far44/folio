@@ -175,7 +175,7 @@ export const ChangeLayoutForm = ({ sectionName }: { sectionName: string }) => {
   return (
     <form
       onSubmit={handleChangeLayout}
-      className="w-3/4 lg:w-[30%] ml-auto flex justify-end items-center gap-4 lg:gap-2  "
+      className="w-3/4 lg:w-[30%] ml-auto flex justify-end items-center gap-2 lg:gap-1  "
     >
       <select
         defaultValue={

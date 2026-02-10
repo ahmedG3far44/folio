@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/ui/card';
-import ShowUserContacts from '../cards/ShowUserContacts';
-import Resume from '../cards/Resume';
 import { useTheme } from '@/contexts/ThemeProvider';
 import { useUser } from '@/contexts/UserProvider';
 import { ChangeLayoutForm } from '../layouts/Layouts';
 
+
+import Resume from '../cards/Resume';
+import ShowUserContacts from '../cards/ShowUserContacts';
 
 
 export interface BioInfo {
@@ -70,7 +71,7 @@ export const HeroVariant1 = ({ contacts }: { contacts: Contacts }) => {
   }, []);
 
   return (
-    <div ref={heroRef} className="flex flex-col justify-center items-center gap-8 px-4 py-8">
+    <div ref={heroRef} className="flex flex-col justify-center items-center gap-2 ">
       <div className="flex justify-around items-center gap-8 lg:gap-16 flex-wrap lg:flex-nowrap w-full max-w-6xl">
         {/* Image with slide-in from left */}
         <div
@@ -92,10 +93,10 @@ export const HeroVariant1 = ({ contacts }: { contacts: Contacts }) => {
           className={`flex flex-col justify-center items-center lg:items-start gap-2 lg:gap-4 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
             }`}
         >
-          <h2 className="lg:text-5xl text-3xl font-black text-center lg:text-start">
+          <h2 className="lg:text-5xl text-3xl w-full lg:w-auto font-black text-center lg:text-start">
             {bio?.bioName}
           </h2>
-          <h3 className="lg:text-2xl text-2xl font-semibold text-center lg:text-start">
+          <h3 className="lg:text-2xl text-2xl w-full lg:w-auto font-semibold text-center lg:text-start">
             {bio?.jobTitle}
           </h3>
           <ShowUserContacts contacts={contacts} />
@@ -110,7 +111,7 @@ export const HeroVariant1 = ({ contacts }: { contacts: Contacts }) => {
           color: activeTheme.secondaryText,
           border: `1px solid ${activeTheme.borderColor}`,
         }}
-        className={`w-full lg:w-3/4 md:w-full p-4 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        className={`w-full my-4 p-4 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
       >
         <p>{bio?.bio}</p>
@@ -146,17 +147,17 @@ export const HeroVariant2 = ({ contacts }: { contacts: Contacts }) => {
   }, []);
 
   return (
-    <div ref={heroRef} className="flex flex-col justify-center items-center gap-8 px-4 py-12">
+    <div ref={heroRef} className="flex flex-col justify-center items-center gap-2 ">
       {/* Image with scale-up animation */}
       <div
-        className={`w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full overflow-hidden shadow-2xl transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
+        className={`w-[150px] h-[150px] lg:w-[150px] lg:h-[150px] rounded-full overflow-hidden shadow-2xl transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
           }`}
       >
         <img
           loading="lazy"
-          width={300}
-          height={300}
-          className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+          width={150}
+          height={150}
+          className="w-full h-full object-cover transition-transform duration-500"
           src={bio?.heroImage}
           alt={bio?.bio}
         />
@@ -235,18 +236,13 @@ export const HeroVariant3 = ({ contacts }: { contacts: Contacts }) => {
 
   return (
     <div ref={heroRef} className="w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 min-h-[600px] lg:min-h-[500px]">
+      <div className="flex justify-center items-center">
         {/* Left: Image Section */}
         <div
-          className={`flex justify-center items-center p-8 lg:p-12 transition-all duration-1000 ${isVisible ? 'opacity-100 clip-path-reveal-left' : 'opacity-0 clip-path-hidden-left'
+          className={`w-1/4 flex justify-center items-center transition-all duration-1000 ${isVisible ? 'opacity-100 clip-path-reveal-left' : 'opacity-0 clip-path-hidden-left'
             }`}
-          style={{
-            clipPath: isVisible
-              ? 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
-              : 'polygon(0 0, 0 0, 0 100%, 0 100%)',
-          }}
         >
-          <div className="w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-2xl">
+          <div className="w-[300px] h-[300px] aspect-square rounded-3xl overflow-hidden shadow-2xl ">
             <img
               loading="lazy"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -258,18 +254,13 @@ export const HeroVariant3 = ({ contacts }: { contacts: Contacts }) => {
 
         {/* Right: Content Section */}
         <div
-          className={`flex flex-col justify-center items-start gap-4 lg:gap-6 p-8 lg:p-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 clip-path-reveal-right' : 'opacity-0 clip-path-hidden-right'
+          className={`w-1/2 flex flex-col justify-center items-start gap-2 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 clip-path-reveal-right' : 'opacity-0 clip-path-hidden-right'
             }`}
-          style={{
-            clipPath: isVisible
-              ? 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
-              : 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
-          }}
         >
-          <h2 className="text-4xl lg:text-6xl font-black">
+          <h2 className="lg:text-6xl text-4xl font-black">
             {bio?.bioName}
           </h2>
-          <h3 className="text-2xl lg:text-3xl font-semibold opacity-80">
+          <h3 className="lg:text-3xl text-2xl font-semibold opacity-80">
             {bio?.jobTitle}
           </h3>
           <ShowUserContacts contacts={contacts} />
@@ -281,7 +272,7 @@ export const HeroVariant3 = ({ contacts }: { contacts: Contacts }) => {
               color: activeTheme.secondaryText,
               border: `1px solid ${activeTheme.borderColor}`,
             }}
-            className="w-full p-5 mt-4"
+            className="w-full"
           >
             <p className="leading-relaxed">{bio?.bio}</p>
           </Card>
@@ -325,11 +316,12 @@ export const HeroVariant4 = ({ contacts }: { contacts: Contacts }) => {
         style={{
           backgroundColor: activeTheme.cardColor,
           border: `1px solid ${activeTheme.borderColor}`,
+
         }}
         className={`w-full max-w-5xl p-8 lg:p-12 shadow-2xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-20 rotate-1'
           }`}
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Image - Takes 1 column */}
           <div
             className={`md:col-span-1 flex justify-center transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
@@ -346,19 +338,19 @@ export const HeroVariant4 = ({ contacts }: { contacts: Contacts }) => {
           </div>
 
           {/* Content - Takes 2 columns */}
-          <div className="md:col-span-2 flex flex-col justify-center gap-4 lg:gap-5">
+          <div className="md:col-span-2 flex flex-col justify-center gap-1 lg:gap-2">
             <div
               className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
             >
               <h2
-                className="text-3xl lg:text-5xl font-black mb-2"
+                className="text-3xl lg:text-5xl font-black"
                 style={{ color: activeTheme.primaryText }}
               >
                 {bio?.bioName}
               </h2>
               <h3
-                className="text-xl lg:text-2xl font-semibold mb-4"
+                className="text-xl lg:text-2xl font-semibold "
                 style={{ color: activeTheme.secondaryText }}
               >
                 {bio?.jobTitle}
@@ -366,11 +358,11 @@ export const HeroVariant4 = ({ contacts }: { contacts: Contacts }) => {
             </div>
 
             <div
-              className={`transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+              className={`transition-all my-2 duration-700 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
             >
               <p
-                className="mb-6 leading-relaxed text-base lg:text-lg"
+                className="leading-relaxed text-base lg:text-lg"
                 style={{ color: activeTheme.secondaryText }}
               >
                 {bio?.bio}
@@ -378,7 +370,7 @@ export const HeroVariant4 = ({ contacts }: { contacts: Contacts }) => {
             </div>
 
             <div
-              className={`flex flex-col gap-3 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+              className={`flex flex-col justify-start items-start gap-2 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
             >
               <ShowUserContacts contacts={contacts} />
@@ -395,7 +387,7 @@ export const HeroVariant4 = ({ contacts }: { contacts: Contacts }) => {
 // VARIANT 5: Modern Asymmetric Grid with Blur-in Animation
 // ============================================================================
 export const HeroVariant5 = ({ contacts }: { contacts: Contacts }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [_, setIsVisible] = useState(false);
   const heroRef = useRef(null);
 
   const { bio } = useUser();
@@ -419,66 +411,38 @@ export const HeroVariant5 = ({ contacts }: { contacts: Contacts }) => {
   }, []);
 
   return (
-    <div ref={heroRef} className="px-4 py-12 lg:py-16">
-      <div className="max-w-7xl mx-auto">
-        {/* Top Section: Name and Image */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 mb-8">
-          {/* Name Section - 3 columns on large screens */}
-          <div className="lg:col-span-3 flex flex-col justify-center gap-4">
-            <h2
-              className={`text-5xl lg:text-7xl font-black leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-5'
-                }`}
-            >
-              {bio?.bioName}
-            </h2>
-            <h3
-              className={`text-2xl lg:text-4xl font-semibold transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-5'
-                }`}
-            >
-              {bio?.jobTitle}
-            </h3>
-          </div>
+    <div ref={heroRef} className="grid grid-cols-3 items-center gap-4 p-8 ">
 
-          {/* Image Section - 2 columns on large screens */}
-          <div
-            className={`lg:col-span-2 flex justify-center lg:justify-end items-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 blur-0 scale-100' : 'opacity-0 blur-md scale-95'
-              }`}
-          >
-            <div className="w-[280px] h-[280px] lg:w-[320px] lg:h-[320px] rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                loading="lazy"
-                className="w-full h-full object-cover hover:scale-105 hover:rotate-2 transition-all duration-700"
-                src={bio?.heroImage}
-                alt={bio?.bio}
-              />
-            </div>
-          </div>
-        </div>
+      <div className='col-span-1 w-full flex flex-col items-start justify-center gap-2 '>
+        <h2
+          className="w-full text-5xl lg:text-8xl text-nowrap font-black mb-2"
+          style={{ color: activeTheme.primaryText }}
+        >
+          {bio?.bioName}
+        </h2>
+        <h3
+          className="w-full text-3xl lg:text-4xl font-semibold mb-4"
+          style={{ color: activeTheme.secondaryText }}
+        >
+          {bio?.jobTitle}
+        </h3>
+        <Resume className="w-full" />
+      </div>
 
-        {/* Bottom Section: Bio and Actions */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Bio Card - 3 columns */}
-          <Card
-            style={{
-              backgroundColor: activeTheme.cardColor,
-              color: activeTheme.secondaryText,
-              border: `1px solid ${activeTheme.borderColor}`,
-            }}
-            className={`lg:col-span-3 p-6 lg:p-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 blur-0 translate-x-0' : 'opacity-0 blur-sm -translate-x-5'
-              }`}
-          >
-            <p className="text-base lg:text-lg leading-relaxed">{bio?.bio}</p>
-          </Card>
+      <div className='col-span-1 w-[250px] h-[250px]  aspect-square rounded-3xl overflow-hidden mx-auto'>
+        <img
+          loading="lazy"
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          src={bio?.heroImage}
+          alt={bio?.bio}
+        />
+      </div>
 
-          {/* Actions - 2 columns */}
-          <div
-            className={`lg:col-span-2 flex flex-col justify-center gap-4 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 blur-0 translate-x-0' : 'opacity-0 blur-sm translate-x-5'
-              }`}
-          >
-            <ShowUserContacts contacts={contacts} />
-            <Resume />
-          </div>
-        </div>
+      <div className='col-span-1 flex flex-col items-start justify-start gap-4 '>
+        <Card>
+          <p className="text-base lg:text-lg leading-relaxed">{bio?.bio}</p>
+        </Card>
+        <ShowUserContacts contacts={contacts} />
       </div>
     </div>
   );
@@ -511,7 +475,7 @@ const HeroComponents = () => {
   return (
     <>
       {editState && <ChangeLayoutForm sectionName='heroLayout' />}
-      <div className="w-full mx-auto flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center mb-40">
         {getActiveHeroLayout(layouts?.heroLayout, contacts as Contacts)}
       </div>
     </>
