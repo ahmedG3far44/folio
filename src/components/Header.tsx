@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { LangType, useUser } from "@/contexts/UserProvider";
 
 
@@ -10,7 +10,7 @@ import { LucideEdit, LucideX } from "lucide-react";
 
 function Header({ setOpen }: { setOpen: (open: boolean) => void }) {
   const [isScroll, setScroll] = useState(false);
-  const { languages, switchLanguage, setEditState, editState } = useUser()
+  const { languages, activeLanguage, switchLanguage, setEditState, editState } = useUser()
   const { activeTheme } = useTheme()
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -47,6 +47,7 @@ function Header({ setOpen }: { setOpen: (open: boolean) => void }) {
         </button>
         <div className="relative w-[120px]">
           <select
+            value={activeLanguage}
             name="languages"
             id="languages"
             onChange={(e) => switchLanguage(e.target.value as LangType)}

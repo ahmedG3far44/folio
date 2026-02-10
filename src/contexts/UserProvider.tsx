@@ -43,14 +43,6 @@ export const UserContext = createContext<UserInfoContextType>({
   error: "",
   languages: [],
   activeLanguage: "en",
-  footer: {
-    text: "",
-    links: {
-      contact: "",
-      privacyPolicy: "",
-      termsOfService: ""
-    },
-  },
   switchLanguage: () => { },
   setLayouts: () => { },
 });
@@ -58,12 +50,13 @@ export const UserContext = createContext<UserInfoContextType>({
 export type LangType = keyof typeof userData;
 
 export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
+  const defaultLang = localStorage.getItem("language") as LangType || "en"
+  
   const [languagesList] = useState<string[]>(Object.keys(userData))
   const [editState, setEditState] = useState<boolean>(false)
-  const [activeLanguage, setActiveLanguage] = useState<LangType>("en")
+  const [activeLanguage, setActiveLanguage] = useState<LangType>(defaultLang)
   const { bio, projects, contacts, experiences, skills } = userData[activeLanguage].userInfoContext;
 
-  const footer = userData[activeLanguage].footer;
   const testimonials = userData[activeLanguage].userInfoContext.testimonials.map(t => ({ ...t, createdAt: new Date(t.createdAt) })) as ITestimonialType[];
   const [userLayouts, setLayouts] = useState<ILayoutType>(JSON.parse(localStorage.getItem("layouts") as string) || {
     id: "1",
@@ -75,6 +68,7 @@ export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
   const [pending] = useState(false);
   const [error] = useState<string | null>(null);
   const switchLanguage = (newLang: LangType) => {
+    localStorage.setItem("language", newLang)
     setActiveLanguage(newLang)
     console.log("language changed to ", newLang)
   }
@@ -95,7 +89,6 @@ export const UserProvider: FC<PropsWithChildren> = ({ children }) => {
         activeLanguage,
         switchLanguage,
         languages: languagesList,
-        footer,
         setLayouts: (newLayout: ILayoutType) => setLayouts({ ...newLayout })
       }}
     >

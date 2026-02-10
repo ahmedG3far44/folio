@@ -41,12 +41,12 @@ const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [themesList, setThemesList] = useState<IThemeType[] | []>([
     {
       id: "1",
-      themeName: "Green Theme",
-      backgroundColor: "#1A2F23",
-      cardColor: "#2D3B33",
-      primaryText: "#7CC68D",
-      secondaryText: "#B8C4B9",
-      borderColor: "#4E7D53"
+      themeName: "Zinc Modern (Light)",
+      backgroundColor: "#FFFFFF",
+      cardColor: "#FFFFFF",
+      primaryText: "#09090B",
+      secondaryText: "#71717A",
+      borderColor: "#E4E4E7"
     },
     {
       id: "2",
@@ -59,21 +59,21 @@ const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
     },
     {
       id: "3",
-      themeName: "Zinc Modern",
-      backgroundColor: "#18181B",
-      cardColor: "#27272A",
-      primaryText: "#FAFAFA",
-      secondaryText: "#A1A1AA",
-      borderColor: "#3F3F46"
+      themeName: "Zinc Modern (Dark)",
+      backgroundColor: "#000000",
+      cardColor: "#111111",
+      primaryText: "#f0f0f0",
+      secondaryText: "#a1a1a1",
+      borderColor: "#333333"
     },
     {
       id: "4",
-      themeName: "Stone Warm",
-      backgroundColor: "#1C1917",
-      cardColor: "#292524",
-      primaryText: "#F5F5F4",
-      secondaryText: "#A8A29E",
-      borderColor: "#44403C"
+      themeName: "Stone Warm (Light)",
+      backgroundColor: "#F5F5F4",
+      cardColor: "#FFFFFF",
+      primaryText: "#1C1917",
+      secondaryText: "#78716C",
+      borderColor: "#E7E5E4"
     },
     {
       id: "5",

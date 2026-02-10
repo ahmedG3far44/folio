@@ -3,9 +3,10 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { useTheme } from "@/contexts/ThemeProvider";
 import { Link, useParams } from "react-router-dom";
-import {  ExternalLink, Undo2 } from "lucide-react";
+import { ExternalLink, Undo2 } from "lucide-react";
 
 import { useUser } from "@/contexts/UserProvider";
+import { getMediaInfo } from "@/lib/utils";
 
 function ProjectDetails() {
   const { activeTheme } = useTheme();
@@ -15,6 +16,7 @@ function ProjectDetails() {
 
   console.log(project)
 
+  const mediaInfo = getMediaInfo(project?.thumbnail as string)
   return (
     <div
       style={{
@@ -34,6 +36,7 @@ function ProjectDetails() {
               <Undo2 size={20} />
             </Button>
           </Link>{" "}
+
           <div className="w-full flex flex-col items-center justify-center lg:w-[60%]">
             {project?.ImagesList ? (
               <div className="w-full flex flex-col items-center justify-center gap-4">
@@ -85,33 +88,24 @@ function ProjectDetails() {
               {project?.title}
             </h2>
             <div className="w-full h-auto flex items-center justify-center">
-              <img
-                className="w-full h-full object-cover rounded-2xl"
-                loading="lazy"
-                src={project?.thumbnail}
-                alt={project?.title}
-              />
-            </div>
-            <div>
-              {project?.tags && (
-                <div className="flex items-center justify-start flex-wrap gap-2">
-                  {project.tags.map((tag) => {
-                    return (
-                      <span
-                        style={{
-                          backgroundColor: activeTheme.backgroundColor,
-                          color: activeTheme.secondaryText,
-                          border: `1px solid ${activeTheme.borderColor}`,
-                        }}
-                        className="p-1 px-4  border rounded-2xl "
-                        key={tag.id}
-                      >
-                        {tag.tagName}
-                      </span>
-                    );
-                  })}
-                </div>
-              )}
+              {
+                mediaInfo?.kind === "image" ? (
+                  <img
+                    className="w-full h-full object-cover rounded-2xl"
+                    loading="lazy"
+                    src={project?.thumbnail}
+                    alt={project?.title}
+                  />
+                ) : (
+                  <video
+                    className="w-full h-full object-cover rounded-2xl"
+                    autoPlay
+                    loop
+                    muted
+                    src={project?.thumbnail}
+                  />
+                )
+              }
             </div>
             <div
               style={{
@@ -136,7 +130,7 @@ function ProjectDetails() {
                   className="w-full cursor-pointer hover:opacity-75 duration-150"
                   variant={"outline"}
                 >
-                  <ExternalLink size={20} />
+                  <ExternalLink size={20} /> View Project
                 </Button>
               </Link>
             )}

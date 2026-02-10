@@ -1,529 +1,992 @@
 {
-    "en": {
-        "user": {
-            "id": "123",
-            "name": "John Doe",
-            "email": "john.doe@example.com",
-            "picture": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
-            "role": "USER",
-            "resume": "Full-stack Developer with 5 years of experience in building scalable web applications and leading agile teams."
-        },
-        "userInfoContext": {
-            "bio": {
-                "id": "1",
-                "bio": "A passionate developer with solid experience in modern web technologies and cloud solutions.",
-                "heroImage": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
-                "bioName": "John Doe",
-                "jobTitle": "Full-stack Developer"
-            },
-            "experiences": [
-                {
-                    "id": "1",
-                    "cName": "TechCorp",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-                    "position": "Senior Developer",
-                    "duration": "2 years",
-                    "role": "As a Lead Developer at TechCorp, I was responsible for overseeing the development of large-scale enterprise applications. I collaborated closely with cross-functional teams, mentored junior developers, and implemented best practices in software architecture, testing, and deployment to ensure high-quality, scalable solutions.",
-                    "location": "New York"
-                },
-                {
-                    "id": "2",
-                    "cName": "WebSolutions",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-                    "position": "Frontend Engineer",
-                    "duration": "3 years",
-                    "role": "At WebSolutions, I specialized in building modern, responsive, and accessible user interfaces using React.js and Tailwind CSS. My role involved collaborating with designers, optimizing performance, and ensuring seamless user experiences across different platforms while contributing to design systems and reusable component libraries.",
-                    "location": "Remote"
-                },
-                {
-                    "id": "3",
-                    "cName": "CloudNova",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
-                    "position": "Full Stack Developer",
-                    "duration": "1.5 years",
-                    "role": "At CloudNova, I worked on full-stack development projects, integrating cloud-based services with scalable backend systems. I designed RESTful APIs, implemented authentication and security protocols, and contributed to DevOps workflows to improve deployment pipelines and reduce downtime.",
-                    "location": "London, UK"
-                },
-                {
-                    "id": "4",
-                    "cName": "InnoTech",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-                    "position": "Software Engineer",
-                    "duration": "2 years",
-                    "role": "During my time at InnoTech, I contributed to the development of SaaS applications, focusing on performance optimization and code quality. I played a key role in modernizing legacy systems by migrating them to modern frameworks and improving database efficiency, which significantly boosted application performance.",
-                    "location": "Berlin, Germany"
-                },
-                {
-                    "id": "5",
-                    "cName": "DataSphere",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
-                    "position": "Backend Engineer",
-                    "duration": "2.5 years",
-                    "role": "At DataSphere, my main focus was on building robust backend systems that could handle large-scale data processing. I worked extensively with databases, optimized query performance, and implemented microservices architecture, ensuring seamless integration between different data pipelines and client-facing APIs.",
-                    "location": "Toronto, Canada"
-                }
-            ],
-            "projects": [
-                {
-                    "id": "1",
-                    "title": "Project A",
-                    "description": "A web application that automates tasks for enterprises.",
-                    "thumbnail": "https://cdn.dribbble.com/userupload/44968361/file/08c147424157a8e1d2e1690969a7836d.png?resize=1024x768&vertical=center",
-                    "ImagesList": [
-                        {
-                            "id": "1",
-                            "url": "https://cdn.dribbble.com/userupload/44968362/file/fa74e656985d216211d6a0a8dd5fa967.png?resize=1024x768&vertical=center"
-                        },
-                        {
-                            "id": "2",
-                            "url": "https://cdn.dribbble.com/userupload/44968368/file/b62a3a635496fe80b4cd2f2fe04b6d1b.png?resize=1024x768&vertical=center"
-                        }
-                    ],
-                    "source": "https://github.com/johndoe/project-a",
-                    "likes": 150,
-                    "views": 1000
-                },
-                {
-                    "id": "2",
-                    "title": "Mobile Shop",
-                    "description": "An e-commerce mobile app built with React Native.",
-                    "thumbnail": "https://cdn.dribbble.com/userupload/44963774/file/c5af6bf50c764b451545a3290394daec.png?resize=752x573&vertical=center",
-                    "ImagesList": [
-                        {
-                            "id": "1",
-                            "url": "https://cdn.dribbble.com/userupload/44963775/file/a6859c1005a5191f295e036658970734.png?resize=752x573&vertical=center"
-                        }
-                    ],
-                    "source": "https://github.com/johndoe/mobile-shop",
-                    "likes": 200,
-                    "views": 2200
-                }
-            ],
-            "skills": [
-                {
-                    "id": "1",
-                    "skillName": "JavaScript",
-                    "skillLogo": "https://img.icons8.com/?size=48&id=108784&format=png"
-                },
-                {
-                    "id": "2",
-                    "skillName": "React",
-                    "skillLogo": "https://img.icons8.com/?size=80&id=asWSSTBrDlTW&format=png"
-                },
-                {
-                    "id": "3",
-                    "skillName": "Node.js",
-                    "skillLogo": "https://img.icons8.com/?size=48&id=54087&format=png"
-                },
-                {
-                    "id": "4",
-                    "skillName": "Docker",
-                    "skillLogo": "https://img.icons8.com/?size=80&id=Wln8Z3PcXanx&format=png"
-                },
-                {
-                    "id": "5",
-                    "skillName": "Tailwind",
-                    "skillLogo": "https://img.icons8.com/?size=48&id=4PiNHtUJVbLs&format=png"
-                },
-                {
-                    "id": "6",
-                    "skillName": "Supabase",
-                    "skillLogo": "https://img.icons8.com/?size=48&id=sH0rW2TvYdr9&format=png"
-                },
-                {
-                    "id": "7",
-                    "skillName": "Firebase",
-                    "skillLogo": "https://img.icons8.com/?size=80&id=ROMfFZ1tMhpk&format=png"
-                },
-                {
-                    "id": "8",
-                    "skillName": "Prisma ORM",
-                    "skillLogo": "https://img.icons8.com/?size=48&id=YKKmRFS8Utmm&format=png"
-                }
-            ],
-            "testimonials": [
-                {
-                    "id": "1",
-                    "profile": "https://i.redd.it/3kj8naxi8io61.jpg",
-                    "name": "Jane Smith",
-                    "feedback": "John is an excellent developer with a keen eye for detail.",
-                    "video": "https://example.com/testimonial-video.mp4",
-                    "position": "Project Manager at TechCorp",
-                    "createdAt": "2025-01-01T12:00:00Z"
-                },
-                {
-                    "id": "2",
-                    "profile": "https://static.vecteezy.com/system/resources/previews/022/216/794/non_2x/face-profile-images-illustration-in-flat-style-free-vector.jpg",
-                    "name": "Michael Brown",
-                    "feedback": "Very professional, delivered on time and exceeded expectations.",
-                    "video": "https://example.com/testimonial-video2.mp4",
-                    "position": "CTO at WebSolutions",
-                    "createdAt": "2025-03-15T15:30:00Z"
-                }
-            ],
-            "layouts": {
-                "id": "1",
-                "heroLayout": "layout1",
-                "expLayout": "layout2",
-                "projectsLayout": "layout3",
-                "skillsLayout": "layout4"
-            },
-            "contacts": {
-                "id": "1",
-                "linkedin": "https://linkedin.com/in/johndoe",
-                "github": "https://github.com/johndoe",
-                "youtube": "https://youtube.com/johndoe",
-                "twitter": "https://twitter.com/johndoe",
-                "email": "john.doe@example.com",
-                "website": "https://johndoe.dev"
-            }
-        },
-        "theme": {
-            "backgroundColor": "#ffffff",
-            "cardColor": "#f4f4f4",
-            "primaryText": "#000000",
-            "secondaryText": "#555555",
-            "borderColor": "#cccccc"
-        },
-        "footer": {
-            "text": "© 2025 John Doe. All rights reserved.",
-            "links": {
-                "privacyPolicy": "Privacy Policy",
-                "termsOfService": "Terms of Service",
-                "contact": "Contact"
-            }
-        }
+  "en": {
+    "user": {
+      "id": "123",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "picture": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+      "role": "USER",
+      "resume": "Full-stack Developer with 5 years of experience in building scalable web applications and leading agile teams."
     },
-    "es": {
-        "user": {
-            "id": "123",
-            "name": "Juan Pérez",
-            "email": "juan.perez@ejemplo.com",
-            "picture": "https://example.com/perfil.jpg",
-            "role": "USUARIO",
-            "resume": "Desarrollador full-stack con 5 años de experiencia construyendo aplicaciones escalables."
+    "userInfoContext": {
+      "bio": {
+        "id": "1",
+        "bio": "A passionate developer with solid experience in modern web technologies and cloud solutions.",
+        "heroImage": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+        "bioName": "John Doe",
+        "jobTitle": "Software Engineer"
+      },
+      "experiences": [
+        {
+          "id": "1",
+          "cName": "TechCorp",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+          "position": "Senior Developer",
+          "duration": "2 years",
+          "role": "As a Lead Developer at TechCorp, I was responsible for overseeing the development of large-scale enterprise applications. I collaborated closely with cross-functional teams, mentored junior developers, and implemented best practices in software architecture, testing, and deployment to ensure high-quality, scalable solutions.",
+          "location": "New York"
         },
-        "userInfoContext": {
-            "bio": {
-                "id": "1",
-                "bio": "Un desarrollador apasionado con experiencia en tecnologías modernas de la web y la nube.",
-                "heroImage": "https://example.com/hero.jpg",
-                "bioName": "Juan Pérez",
-                "jobTitle": "Desarrollador Full-stack"
-            },
-            "experiences": [
-                {
-                    "id": "1",
-                    "cName": "TechCorp",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-                    "position": "Senior Developer",
-                    "duration": "2 years",
-                    "role": "Como Desarrollador Principal en TechCorp, fui responsable de supervisar el desarrollo de aplicaciones empresariales a gran escala. Colaboré estrechamente con equipos multifuncionales, brindé mentoría a desarrolladores junior e implementé buenas prácticas en arquitectura de software, pruebas y despliegue para garantizar soluciones escalables y de alta calidad.",
-                    "location": "New York"
-                },
-                {
-                    "id": "2",
-                    "cName": "WebSolutions",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-                    "position": "Frontend Engineer",
-                    "duration": "3 years",
-                    "role": "En WebSolutions me especialicé en la construcción de interfaces de usuario modernas, responsivas y accesibles utilizando React.js y Tailwind CSS. Mi función incluyó la colaboración con diseñadores, la optimización del rendimiento y la garantía de experiencias de usuario fluidas en diferentes plataformas, además de contribuir a sistemas de diseño y librerías de componentes reutilizables.",
-                    "location": "Remote"
-                },
-                {
-                    "id": "3",
-                    "cName": "CloudNova",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
-                    "position": "Full Stack Developer",
-                    "duration": "1.5 years",
-                    "role": "En CloudNova trabajé en proyectos de desarrollo full-stack, integrando servicios en la nube con sistemas backend escalables. Diseñé APIs RESTful, implementé protocolos de autenticación y seguridad, y contribuí a los flujos de trabajo de DevOps para mejorar los procesos de despliegue y reducir el tiempo de inactividad.",
-                    "location": "London, UK"
-                },
-                {
-                    "id": "4",
-                    "cName": "InnoTech",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-                    "position": "Software Engineer",
-                    "duration": "2 years",
-                    "role": "Durante mi tiempo en InnoTech, contribuí al desarrollo de aplicaciones SaaS, centrándome en la optimización del rendimiento y la calidad del código. Jugué un papel clave en la modernización de sistemas heredados mediante su migración a frameworks modernos y la mejora de la eficiencia de bases de datos, lo que resultó en un notable aumento del rendimiento de las aplicaciones.",
-                    "location": "Berlin, Germany"
-                },
-                {
-                    "id": "5",
-                    "cName": "DataSphere",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
-                    "position": "Backend Engineer",
-                    "duration": "2.5 years",
-                    "role": "En DataSphere me enfoqué principalmente en construir sistemas backend robustos capaces de manejar procesamiento de datos a gran escala. Trabajé extensamente con bases de datos, optimicé el rendimiento de consultas e implementé una arquitectura de microservicios para asegurar una integración fluida entre pipelines de datos y APIs orientadas al cliente.",
-                    "location": "Toronto, Canada"
-                }
-            ],
-            "projects": [
-                {
-                    "id": "1",
-                    "title": "Proyecto A",
-                    "description": "Una aplicación web que automatiza tareas para empresas.",
-                    "thumbnail": "https://example.com/proyecto-a-thumbnail.jpg",
-                    "ImagesList": [
-                        {
-                            "id": "1",
-                            "url": "https://example.com/proyecto-a-imagen1.jpg"
-                        }
-                    ],
-                    "source": "https://github.com/juanperez/proyecto-a",
-                    "likes": 150,
-                    "views": 1000
-                },
-                {
-                    "id": "2",
-                    "title": "Tienda Móvil",
-                    "description": "Aplicación móvil de comercio electrónico desarrollada con React Native.",
-                    "thumbnail": "https://example.com/tienda-movil-thumbnail.jpg",
-                    "ImagesList": [
-                        {
-                            "id": "1",
-                            "url": "https://example.com/tienda-movil-imagen1.jpg"
-                        }
-                    ],
-                    "source": "https://github.com/juanperez/tienda-movil",
-                    "likes": 200,
-                    "views": 2200
-                }
-            ],
-            "skills": [
-                {
-                    "id": "1",
-                    "skillName": "JavaScript",
-                    "skillLogo": "https://example.com/js-logo.png"
-                },
-                {
-                    "id": "2",
-                    "skillName": "React",
-                    "skillLogo": "https://example.com/react-logo.png"
-                },
-                {
-                    "id": "3",
-                    "skillName": "Node.js",
-                    "skillLogo": "https://example.com/node-logo.png"
-                }
-            ],
-            "testimonials": [
-                {
-                    "id": "1",
-                    "profile": "https://example.com/testimonial-profile.jpg",
-                    "name": "Ana Martínez",
-                    "feedback": "Juan es un excelente desarrollador con un ojo agudo para los detalles.",
-                    "video": "https://example.com/testimonial-video.mp4",
-                    "position": "Gerente de Proyecto en TechCorp",
-                    "createdAt": "2025-01-01T12:00:00Z"
-                },
-                {
-                    "id": "2",
-                    "profile": "https://example.com/testimonial-profile2.jpg",
-                    "name": "Carlos López",
-                    "feedback": "Muy profesional, entregó a tiempo y superó las expectativas.",
-                    "video": "https://example.com/testimonial-video2.mp4",
-                    "position": "CTO en WebSolutions",
-                    "createdAt": "2025-03-15T15:30:00Z"
-                }
-            ],
-            "layouts": {
-                "id": "1",
-                "heroLayout": "layout1",
-                "expLayout": "layout2",
-                "projectsLayout": "layout3",
-                "skillsLayout": "layout4"
-            },
-            "contacts": {
-                "id": "1",
-                "linkedin": "https://linkedin.com/in/juanperez",
-                "github": "https://github.com/juanperez",
-                "youtube": "https://youtube.com/juanperez",
-                "twitter": "https://twitter.com/juanperez",
-                "email": "juan.perez@ejemplo.com",
-                "website": "https://juanperez.dev"
-            }
+        {
+          "id": "2",
+          "cName": "WebSolutions",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+          "position": "Frontend Engineer",
+          "duration": "3 years",
+          "role": "At WebSolutions, I specialized in building modern, responsive, and accessible user interfaces using React.js and Tailwind CSS. My role involved collaborating with designers, optimizing performance, and ensuring seamless user experiences across different platforms while contributing to design systems and reusable component libraries.",
+          "location": "Remote"
         },
-        "theme": {
-            "backgroundColor": "#ffffff",
-            "cardColor": "#f4f4f4",
-            "primaryText": "#000000",
-            "secondaryText": "#555555",
-            "borderColor": "#cccccc"
+        {
+          "id": "3",
+          "cName": "CloudNova",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
+          "position": "Full Stack Developer",
+          "duration": "1.5 years",
+          "role": "At CloudNova, I worked on full-stack development projects, integrating cloud-based services with scalable backend systems. I designed RESTful APIs, implemented authentication and security protocols, and contributed to DevOps workflows to improve deployment pipelines and reduce downtime.",
+          "location": "London, UK"
         },
-        "footer": {
-            "text": "© 2025 Juan Pérez. Todos los derechos reservados.",
-            "links": {
-                "privacyPolicy": "Política de Privacidad",
-                "termsOfService": "Términos de Servicio",
-                "contact": "Contacto"
-            }
+        {
+          "id": "4",
+          "cName": "InnoTech",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "position": "Software Engineer",
+          "duration": "2 years",
+          "role": "During my time at InnoTech, I contributed to the development of SaaS applications, focusing on performance optimization and code quality. I played a key role in modernizing legacy systems by migrating them to modern frameworks and improving database efficiency, which significantly boosted application performance.",
+          "location": "Berlin, Germany"
+        },
+        {
+          "id": "5",
+          "cName": "DataSphere",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
+          "position": "Backend Engineer",
+          "duration": "2.5 years",
+          "role": "At DataSphere, my main focus was on building robust backend systems that could handle large-scale data processing. I worked extensively with databases, optimized query performance, and implemented microservices architecture, ensuring seamless integration between different data pipelines and client-facing APIs.",
+          "location": "Toronto, Canada"
         }
-    },
-    "ar": {
-        "user": {
-            "id": "123",
-            "name": "محمد علي",
-            "email": "mohamed.ali@example.com",
-            "picture": "https://example.com/profile-ar.jpg",
-            "role": "مستخدم",
-            "resume": "مطور برمجيات Full-stack مع خبرة ٥ سنوات في تطوير تطبيقات الويب."
-        },
-        "userInfoContext": {
-            "bio": {
-                "id": "1",
-                "bio": "مطور شغوف يتمتع بخبرة قوية في تقنيات الويب الحديثة والحلول السحابية.",
-                "heroImage": "https://example.com/hero-ar.jpg",
-                "bioName": "محمد علي",
-                "jobTitle": "مطور Full-stack"
+      ],
+      "projects": [
+        {
+          "id": "1",
+          "title": "devPilot",
+          "description": "An advanced developer productivity suite built with React, Express, MongoDB, and TypeScript for workflow automation.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4"
             },
-            "experiences": [
-                {
-                    "id": "1",
-                    "cName": "TechCorp",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-                    "position": "Senior Developer",
-                    "duration": "2 years",
-                    "role": "بصفتي مطورًا رئيسيًا في شركة TechCorp، كنت مسؤولاً عن الإشراف على تطوير تطبيقات مؤسسية واسعة النطاق. عملت بشكل وثيق مع فرق متعددة التخصصات، وقدمت التوجيه والإرشاد للمطورين المبتدئين، كما قمت بتطبيق أفضل الممارسات في هندسة البرمجيات، الاختبارات، والنشر لضمان حلول عالية الجودة وقابلة للتوسع.",
-                    "location": "New York"
-                },
-                {
-                    "id": "2",
-                    "cName": "WebSolutions",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-                    "position": "Frontend Engineer",
-                    "duration": "3 years",
-                    "role": "في شركة WebSolutions، تخصصت في بناء واجهات مستخدم حديثة، متجاوبة، وسهلة الوصول باستخدام React.js و Tailwind CSS. شمل دوري التعاون مع المصممين، تحسين الأداء، وضمان تجربة مستخدم سلسة عبر المنصات المختلفة، بالإضافة إلى المساهمة في أنظمة التصميم وبناء مكتبات مكونات قابلة لإعادة الاستخدام.",
-                    "location": "Remote"
-                },
-                {
-                    "id": "3",
-                    "cName": "CloudNova",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
-                    "position": "Full Stack Developer",
-                    "duration": "1.5 years",
-                    "role": "في شركة CloudNova، عملت على مشاريع تطوير متكاملة، مدمجة مع خدمات سحابية قابلة للتوسع. قمت بتصميم واجهات برمجية (RESTful APIs)، وتطبيق بروتوكولات الأمان والمصادقة، وساهمت في تحسين سير عمل DevOps لتعزيز كفاءة خطوط النشر وتقليل وقت التوقف.",
-                    "location": "London, UK"
-                },
-                {
-                    "id": "4",
-                    "cName": "InnoTech",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-                    "position": "Software Engineer",
-                    "duration": "2 years",
-                    "role": "خلال فترة عملي في InnoTech، ساهمت في تطوير تطبيقات SaaS مع التركيز على تحسين الأداء وجودة الكود. لعبت دورًا رئيسيًا في تحديث الأنظمة القديمة من خلال ترحيلها إلى أطر عمل حديثة وتحسين كفاءة قواعد البيانات، مما أدى إلى زيادة كبيرة في أداء التطبيقات.",
-                    "location": "Berlin, Germany"
-                },
-                {
-                    "id": "5",
-                    "cName": "DataSphere",
-                    "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
-                    "position": "Backend Engineer",
-                    "duration": "2.5 years",
-                    "role": "في شركة DataSphere، كان تركيزي الرئيسي على بناء أنظمة خلفية قوية قادرة على معالجة البيانات على نطاق واسع. عملت بشكل مكثف مع قواعد البيانات، وقمت بتحسين أداء الاستعلامات، كما نفذت بنية قائمة على الميكروسيرفس لضمان تكامل سلس بين خطوط معالجة البيانات وواجهات برمجية موجهة للمستخدمين.",
-                    "location": "Toronto, Canada"
-                }
-            ],
-            "projects": [
-                {
-                    "id": "1",
-                    "title": "المشروع أ",
-                    "description": "تطبيق ويب يقوم بأتمتة المهام للشركات.",
-                    "thumbnail": "https://example.com/project-a-ar-thumbnail.jpg",
-                    "ImagesList": [
-                        {
-                            "id": "1",
-                            "url": "https://example.com/project-a-ar-image1.jpg"
-                        }
-                    ],
-                    "source": "https://github.com/mohamedali/project-a",
-                    "likes": 160,
-                    "views": 1100
-                },
-                {
-                    "id": "2",
-                    "title": "متجر الجوال",
-                    "description": "تطبيق تجارة إلكترونية للهواتف باستخدام React Native.",
-                    "thumbnail": "https://example.com/mobile-shop-ar-thumbnail.jpg",
-                    "ImagesList": [
-                        {
-                            "id": "1",
-                            "url": "https://example.com/mobile-shop-ar-image1.jpg"
-                        }
-                    ],
-                    "source": "https://github.com/mohamedali/mobile-shop",
-                    "likes": 210,
-                    "views": 2500
-                }
-            ],
-            "skills": [
-                {
-                    "id": "1",
-                    "skillName": "جافاسكربت",
-                    "skillLogo": "https://example.com/js-logo.png"
-                },
-                {
-                    "id": "2",
-                    "skillName": "ريأكت",
-                    "skillLogo": "https://example.com/react-logo.png"
-                },
-                {
-                    "id": "3",
-                    "skillName": "نود جي إس",
-                    "skillLogo": "https://example.com/node-logo.png"
-                }
-            ],
-            "testimonials": [
-                {
-                    "id": "1",
-                    "profile": "https://example.com/testimonial-ar-profile.jpg",
-                    "name": "أحمد حسن",
-                    "feedback": "محمد مطور مبدع ودقيق جدًا في عمله.",
-                    "video": "https://example.com/testimonial-ar-video.mp4",
-                    "position": "مدير مشروع في تك كورب",
-                    "createdAt": "2025-01-01T12:00:00Z"
-                },
-                {
-                    "id": "2",
-                    "profile": "https://example.com/testimonial-ar-profile2.jpg",
-                    "name": "سارة محمود",
-                    "feedback": "محترف للغاية، التزم بالوقت وتجاوز التوقعات.",
-                    "video": "https://example.com/testimonial-ar-video2.mp4",
-                    "position": "المدير التقني في ويب سولوشنز",
-                    "createdAt": "2025-03-15T15:30:00Z"
-                }
-            ],
-            "layouts": {
-                "id": "1",
-                "heroLayout": "layout1",
-                "expLayout": "layout2",
-                "projectsLayout": "layout3",
-                "skillsLayout": "layout4"
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4"
             },
-            "contacts": {
-                "id": "1",
-                "linkedin": "https://linkedin.com/in/mohamedali",
-                "github": "https://github.com/mohamedali",
-                "youtube": "https://youtube.com/mohamedali",
-                "twitter": "https://twitter.com/mohamedali",
-                "email": "mohamed.ali@example.com",
-                "website": "https://mohamedali.dev"
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46632259/file/5437847ef0e0778445309e6dcfd08f8b.png?resize=1200x900&vertical=center"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46632259/file/5437847ef0e0778445309e6dcfd08f8b.png?resize=1200x900&vertical=center"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46632259/file/5437847ef0e0778445309e6dcfd08f8b.png?resize=1200x900&vertical=center"
             }
+          ],
+          "source": "https://github.com/AhmedG3far/devPilot",
+          "likes": 850,
+          "views": 12000
         },
-        "theme": {
-            "backgroundColor": "#ffffff",
-            "cardColor": "#f4f4f4",
-            "primaryText": "#000000",
-            "secondaryText": "#555555",
-            "borderColor": "#cccccc"
-        },
-        "footer": {
-            "text": "© ٢٠٢٥ محمد علي. جميع الحقوق محفوظة.",
-            "links": {
-                "privacyPolicy": "سياسة الخصوصية",
-                "termsOfService": "شروط الاستخدام",
-                "contact": "تواصل معنا"
+        {
+          "id": "2",
+          "title": "NutriAI",
+          "description": "AI-powered diet planner using machine learning to generate personalized meal plans based on health metrics.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/18425928/file/original-77d3d2248b25dda4d60babdbade64bd4.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
             }
+          ],
+          "source": "https://github.com/AhmedG3far/NutriAI",
+          "likes": 640,
+          "views": 9500
+        },
+        {
+          "id": "3",
+          "title": "KubeMonitor",
+          "description": "A real-time monitoring tool for Kubernetes clusters providing visual insights into pod health and traffic.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46687127/file/24a58bcb88eef80fd265755a127c8654.png?resize=1024x7294&vertical=center"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46687126/file/268fd78dfcde80a10f8b98876d02e07d.png?resize=1024x768&vertical=center"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46687126/file/268fd78dfcde80a10f8b98876d02e07d.png?resize=1024x768&vertical=center"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46687126/file/268fd78dfcde80a10f8b98876d02e07d.png?resize=1024x768&vertical=center"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46687126/file/268fd78dfcde80a10f8b98876d02e07d.png?resize=1024x768&vertical=center"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46687126/file/268fd78dfcde80a10f8b98876d02e07d.png?resize=1024x768&vertical=center"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/KubeMonitor",
+          "likes": 420,
+          "views": 5000
+        },
+        {
+          "id": "4",
+          "title": "SecureVault API",
+          "description": "Highly secure backend for encrypted data storage featuring JWT, OAuth2, and AES-256 encryption.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg?resize=1021x766&vertical=center"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/SecureVault",
+          "likes": 290,
+          "views": 4100
+        },
+        {
+          "id": "5",
+          "title": "DataFlow Visualizer",
+          "description": "A data science project that visualizes complex big data streams using D3.js and Python backend.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png?resize=1200x900&vertical=center",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png?resize=1200x900&vertical=center"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png?resize=1200x900&vertical=center"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png?resize=1200x900&vertical=center"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png?resize=1200x900&vertical=center"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png?resize=1200x900&vertical=center"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/DataFlow",
+          "likes": 530,
+          "views": 7800
+        },
+        {
+          "id": "6",
+          "title": "NetPulse",
+          "description": "Network analysis and packet sniffing tool designed for cybersecurity professionals.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46683163/file/bb3ff4e83f36b92e8a4ad4606d9f8fee.png?resize=1024x768&vertical=center",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46683166/file/834e13bdea95510a23e3269a858e6eea.png?resize=752x564&vertical=center"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46683164/file/f55b57f0b91900ada4cdf0ed04c5f097.png?resize=752x461&vertical=center"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46683167/file/89837e38aebab1e2c4f5c285d0ca7354.png?resize=752x564&vertical=center"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/NetPulse",
+          "likes": 380,
+          "views": 6200
         }
+      ],
+      "skills": [
+        {
+          "id": "1",
+          "skillName": "JavaScript",
+          "skillLogo": "https://img.icons8.com/?size=48&id=108784&format=png"
+        },
+        {
+          "id": "2",
+          "skillName": "React",
+          "skillLogo": "https://img.icons8.com/?size=80&id=asWSSTBrDlTW&format=png"
+        },
+        {
+          "id": "3",
+          "skillName": "Node.js",
+          "skillLogo": "https://img.icons8.com/?size=48&id=54087&format=png"
+        },
+        {
+          "id": "4",
+          "skillName": "Docker",
+          "skillLogo": "https://img.icons8.com/?size=80&id=Wln8Z3PcXanx&format=png"
+        },
+        {
+          "id": "5",
+          "skillName": "Tailwind",
+          "skillLogo": "https://img.icons8.com/?size=48&id=4PiNHtUJVbLs&format=png"
+        },
+        {
+          "id": "6",
+          "skillName": "Supabase",
+          "skillLogo": "https://img.icons8.com/?size=48&id=sH0rW2TvYdr9&format=png"
+        },
+        {
+          "id": "7",
+          "skillName": "Firebase",
+          "skillLogo": "https://img.icons8.com/?size=80&id=ROMfFZ1tMhpk&format=png"
+        },
+        {
+          "id": "8",
+          "skillName": "Prisma ORM",
+          "skillLogo": "https://img.icons8.com/?size=48&id=YKKmRFS8Utmm&format=png"
+        }
+      ],
+      "testimonials": [
+        {
+          "id": "1",
+          "profile": "https://imgs.search.brave.com/V26O3ShQFd5qt_DJnNpzw3QzxnbfkBEycyX9GmBz0qI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTIvQXZh/dGFyLVByb2ZpbGUt/UE5HLUltYWdlcy1I/RC5wbmc",
+          "name": "Jane Smith",
+          "feedback": "John is an excellent developer with a keen eye for detail.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "position": "Project Manager at TechCorp",
+          "createdAt": "2025-01-01T12:00:00Z"
+        },
+        {
+          "id": "2",
+          "profile": "https://imgs.search.brave.com/V26O3ShQFd5qt_DJnNpzw3QzxnbfkBEycyX9GmBz0qI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTIvQXZh/dGFyLVByb2ZpbGUt/UE5HLUltYWdlcy1I/RC5wbmc",
+          "name": "Michael Brown",
+          "feedback": "Very professional, delivered on time and exceeded expectations.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "position": "CTO at WebSolutions",
+          "createdAt": "2025-03-15T15:30:00Z"
+        }
+      ],
+      "contacts": {
+        "id": "1",
+        "linkedin": "https://linkedin.com/in/ahmedG3far44",
+        "github": "https://github.com/ahmedG3far44",
+        "youtube": "https://youtube.com",
+        "twitter": "https://twitter.com/ahmedG3far44",
+        "email": "ahmedjaafarbadri@gmail.com",
+        "website": "https://ahmedg3far.online"
+      }
     }
+  },
+  "es": {
+    "user": {
+      "id": "123",
+      "name": "Juan Pérez",
+      "email": "[EMAIL_ADDRESS]",
+      "picture": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+      "role": "Software Engineer",
+      "resume": "Desarrollador full-stack con 5 años de experiencia construyendo aplicaciones escalables."
+    },
+    "userInfoContext": {
+      "bio": {
+        "id": "1",
+        "bio": "Un desarrollador apasionado con experiencia en tecnologías modernas de la web y la nube.",
+        "heroImage": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+        "bioName": "Juan Pérez",
+        "jobTitle": "Software Engineer"
+      },
+      "experiences": [
+        {
+          "id": "1",
+          "cName": "TechCorp",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+          "position": "Senior Developer",
+          "duration": "2 years",
+          "role": "Como Desarrollador Principal en TechCorp, fui responsable de supervisar el desarrollo de aplicaciones empresariales a gran escala. Colaboré estrechamente con equipos multifuncionales, brindé mentoría a desarrolladores junior e implementé buenas prácticas en arquitectura de software, pruebas y despliegue para garantizar soluciones escalables y de alta calidad.",
+          "location": "New York"
+        },
+        {
+          "id": "2",
+          "cName": "WebSolutions",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+          "position": "Frontend Engineer",
+          "duration": "3 years",
+          "role": "En WebSolutions me especialicé en la construcción de interfaces de usuario modernas, responsivas y accesibles utilizando React.js y Tailwind CSS. Mi función incluyó la colaboración con diseñadores, la optimización del rendimiento y la garantía de experiencias de usuario fluidas en diferentes plataformas, además de contribuir a sistemas de diseño y librerías de componentes reutilizables.",
+          "location": "Remote"
+        },
+        {
+          "id": "3",
+          "cName": "CloudNova",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
+          "position": "Full Stack Developer",
+          "duration": "1.5 years",
+          "role": "En CloudNova trabajé en proyectos de desarrollo full-stack, integrando servicios en la nube con sistemas backend escalables. Diseñé APIs RESTful, implementé protocolos de autenticación y seguridad, y contribuí a los flujos de trabajo de DevOps para mejorar los procesos de despliegue y reducir el tiempo de inactividad.",
+          "location": "London, UK"
+        },
+        {
+          "id": "4",
+          "cName": "InnoTech",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "position": "Software Engineer",
+          "duration": "2 years",
+          "role": "Durante mi tiempo en InnoTech, contribuí al desarrollo de aplicaciones SaaS, centrándome en la optimización del rendimiento y la calidad del código. Jugué un papel clave en la modernización de sistemas heredados mediante su migración a frameworks modernos y la mejora de la eficiencia de bases de datos, lo que resultó en un notable aumento del rendimiento de las aplicaciones.",
+          "location": "Berlin, Germany"
+        },
+        {
+          "id": "5",
+          "cName": "DataSphere",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
+          "position": "Backend Engineer",
+          "duration": "2.5 years",
+          "role": "En DataSphere me enfoqué principalmente en construir sistemas backend robustos capaces de manejar procesamiento de datos a gran escala. Trabajé extensamente con bases de datos, optimicé el rendimiento de consultas e implementé una arquitectura de microservicios para asegurar una integración fluida entre pipelines de datos y APIs orientadas al cliente.",
+          "location": "Toronto, Canada"
+        }
+      ],
+      "projects": [
+        {
+          "id": "1",
+          "title": "devPilot",
+          "description": "Una suite avanzada de productividad para desarrolladores construida con React, Express, MongoDB y TypeScript para la automatización de flujos de trabajo.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/devPilot",
+          "likes": 850,
+          "views": 12000
+        },
+        {
+          "id": "2",
+          "title": "NutriAI",
+          "description": "Planificador de dietas impulsado por IA que utiliza aprendizaje automático para generar planes de comidas personalizados según métricas de salud.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/18425928/file/original-77d3d2248b25dda4d60babdbade64bd4.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/NutriAI",
+          "likes": 640,
+          "views": 9500
+        },
+        {
+          "id": "3",
+          "title": "KubeMonitor",
+          "description": "Herramienta de monitoreo en tiempo real para clústeres de Kubernetes que proporciona información visual sobre la salud de los pods y el tráfico.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/KubeMonitor",
+          "likes": 420,
+          "views": 5000
+        },
+        {
+          "id": "4",
+          "title": "SecureVault API",
+          "description": "Backend altamente seguro para el almacenamiento de datos cifrados que incluye JWT, OAuth2 y cifrado AES-256.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/SecureVault",
+          "likes": 290,
+          "views": 4100
+        },
+        {
+          "id": "5",
+          "title": "DataFlow Visualizer",
+          "description": "Proyecto de ciencia de datos que visualiza flujos complejos de big data utilizando D3.js y un backend en Python.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/DataFlow",
+          "likes": 530,
+          "views": 7800
+        },
+        {
+          "id": "6",
+          "title": "NetPulse",
+          "description": "Herramienta de análisis de red y captura de paquetes diseñada para profesionales de la ciberseguridad.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46683163/file/bb3ff4e83f36b92e8a4ad4606d9f8fee.png",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "5",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "6",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/NetPulse",
+          "likes": 380,
+          "views": 6200
+        }
+      ],
+      "skills": [
+         {
+          "id": "1",
+          "skillName": "JavaScript",
+          "skillLogo": "https://img.icons8.com/?size=48&id=108784&format=png"
+        },
+        {
+          "id": "2",
+          "skillName": "React",
+          "skillLogo": "https://img.icons8.com/?size=80&id=asWSSTBrDlTW&format=png"
+        },
+        {
+          "id": "3",
+          "skillName": "Node.js",
+          "skillLogo": "https://img.icons8.com/?size=48&id=54087&format=png"
+        },
+        {
+          "id": "4",
+          "skillName": "Docker",
+          "skillLogo": "https://img.icons8.com/?size=80&id=Wln8Z3PcXanx&format=png"
+        },
+        {
+          "id": "5",
+          "skillName": "Tailwind",
+          "skillLogo": "https://img.icons8.com/?size=48&id=4PiNHtUJVbLs&format=png"
+        },
+        {
+          "id": "6",
+          "skillName": "Supabase",
+          "skillLogo": "https://img.icons8.com/?size=48&id=sH0rW2TvYdr9&format=png"
+        },
+        {
+          "id": "7",
+          "skillName": "Firebase",
+          "skillLogo": "https://img.icons8.com/?size=80&id=ROMfFZ1tMhpk&format=png"
+        },
+        {
+          "id": "8",
+          "skillName": "Prisma ORM",
+          "skillLogo": "https://img.icons8.com/?size=48&id=YKKmRFS8Utmm&format=png"
+        }
+      ],
+      "testimonials": [
+        {
+          "id": "1",
+          "profile": "https://imgs.search.brave.com/V26O3ShQFd5qt_DJnNpzw3QzxnbfkBEycyX9GmBz0qI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTIvQXZh/dGFyLVByb2ZpbGUt/UE5HLUltYWdlcy1I/RC5wbmc",
+          "name": "Ana Martínez",
+          "feedback": "Juan es un excelente desarrollador con un ojo agudo para los detalles.",
+          "video": "https://example.com/testimonial-video.mp4",
+          "position": "Gerente de Proyecto en TechCorp",
+          "createdAt": "2025-01-01T12:00:00Z"
+        },
+        {
+          "id": "2",
+          "profile": "https://imgs.search.brave.com/V26O3ShQFd5qt_DJnNpzw3QzxnbfkBEycyX9GmBz0qI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTIvQXZh/dGFyLVByb2ZpbGUt/UE5HLUltYWdlcy1I/RC5wbmc",
+          "name": "Carlos López",
+          "feedback": "Muy profesional, entregó a tiempo y superó las expectativas.",
+          "video": "https://example.com/testimonial-video2.mp4",
+          "position": "CTO en WebSolutions",
+          "createdAt": "2025-03-15T15:30:00Z"
+        }
+      ],
+      "contacts": {
+        "id": "1",
+        "linkedin": "https://linkedin.com/in/ahmedG3far44",
+        "github": "https://github.com/ahmedG3far44",
+        "youtube": "https://youtube.com/juanperez",
+        "twitter": "https://twitter.com/ahmedG3far44",
+        "email": "ahmedjaafarbadri@gmail.com",
+        "website": "https://ahmedg3far.online"
+      }
+    }
+  },
+  "ar": {
+    "user": {
+      "id": "123",
+      "name": "محمد علي",
+      "email": "[EMAIL_ADDRESS]",
+      "picture": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+      "role": "Software Engineer",
+      "resume": "مطور برمجيات Full-stack مع خبرة ٥ سنوات في تطوير تطبيقات الويب."
+    },
+    "userInfoContext": {
+      "bio": {
+        "id": "1",
+        "bio": "مطور شغوف يتمتع بخبرة قوية في تقنيات الويب الحديثة والحلول السحابية.",
+        "heroImage": "https://i.pinimg.com/736x/4f/a7/e5/4fa7e50f52bb387fd4d41382eaaf4dd3.jpg",
+        "bioName": "محمد علي",
+        "jobTitle": "مهندس برمجيات"
+      },
+      "experiences": [
+        {
+          "id": "1",
+          "cName": "TechCorp",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+          "position": "Senior Developer",
+          "duration": "2 years",
+          "role": "بصفتي مطورًا رئيسيًا في شركة TechCorp، كنت مسؤولاً عن الإشراف على تطوير تطبيقات مؤسسية واسعة النطاق. عملت بشكل وثيق مع فرق متعددة التخصصات، وقدمت التوجيه والإرشاد للمطورين المبتدئين، كما قمت بتطبيق أفضل الممارسات في هندسة البرمجيات، الاختبارات، والنشر لضمان حلول عالية الجودة وقابلة للتوسع.",
+          "location": "New York, USA"
+        },
+        {
+          "id": "2",
+          "cName": "WebSolutions",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+          "position": "Frontend Engineer",
+          "duration": "3 years",
+          "role": "في شركة WebSolutions، تخصصت في بناء واجهات مستخدم حديثة، متجاوبة، وسهلة الوصول باستخدام React.js و Tailwind CSS. شمل دوري التعاون مع المصممين، تحسين الأداء، وضمان تجربة مستخدم سلسة عبر المنصات المختلفة، بالإضافة إلى المساهمة في أنظمة التصميم وبناء مكتبات مكونات قابلة لإعادة الاستخدام.",
+          "location": "Remote"
+        },
+        {
+          "id": "3",
+          "cName": "CloudNova",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Azure_Logo.svg",
+          "position": "Full Stack Developer",
+          "duration": "1.5 years",
+          "role": "في شركة CloudNova، عملت على مشاريع تطوير متكاملة، مدمجة مع خدمات سحابية قابلة للتوسع. قمت بتصميم واجهات برمجية (RESTful APIs)، وتطبيق بروتوكولات الأمان والمصادقة، وساهمت في تحسين سير عمل DevOps لتعزيز كفاءة خطوط النشر وتقليل وقت التوقف.",
+          "location": "London, UK"
+        },
+        {
+          "id": "4",
+          "cName": "InnoTech",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "position": "Software Engineer",
+          "duration": "2 years",
+          "role": "خلال فترة عملي في InnoTech، ساهمت في تطوير تطبيقات SaaS مع التركيز على تحسين الأداء وجودة الكود. لعبت دورًا رئيسيًا في تحديث الأنظمة القديمة من خلال ترحيلها إلى أطر عمل حديثة وتحسين كفاءة قواعد البيانات، مما أدى إلى زيادة كبيرة في أداء التطبيقات.",
+          "location": "Berlin, Germany"
+        },
+        {
+          "id": "5",
+          "cName": "DataSphere",
+          "cLogo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
+          "position": "Backend Engineer",
+          "duration": "2.5 years",
+          "role": "في شركة DataSphere، كان تركيزي الرئيسي على بناء أنظمة خلفية قوية قادرة على معالجة البيانات على نطاق واسع. عملت بشكل مكثف مع قواعد البيانات، وقمت بتحسين أداء الاستعلامات، كما نفذت بنية قائمة على الميكروسيرفس لضمان تكامل سلس بين خطوط معالجة البيانات وواجهات برمجية موجهة للمستخدمين.",
+          "location": "Toronto, Canada"
+        }
+      ],
+      "projects": [
+        {
+          "id": "1",
+          "title": "devPilot",
+          "description": "مجموعة متقدمة لزيادة إنتاجية المطورين مبنية باستخدام React و Express و MongoDB و TypeScript لأتمتة سير العمل.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46384501/file/c1da0040657e5a45c236423e7b056e5c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/devPilot",
+          "likes": 850,
+          "views": 12000
+        },
+        {
+          "id": "2",
+          "title": "NutriAI",
+          "description": "مخطط نظام غذائي مدعوم بالذكاء الاصطناعي يستخدم تعلم الآلة لإنشاء خطط وجبات مخصصة بناءً على المؤشرات الصحية.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/18425928/file/original-77d3d2248b25dda4d60babdbade64bd4.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/18425928/file/original-77d3d2248b25dda4d60babdbade64bd4.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/18425928/file/original-77d3d2248b25dda4d60babdbade64bd4.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/18425928/file/original-77d3d2248b25dda4d60babdbade64bd4.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/18425928/file/original-77d3d2248b25dda4d60babdbade64bd4.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/NutriAI",
+          "likes": 640,
+          "views": 9500
+        },
+        {
+          "id": "3",
+          "title": "KubeMonitor",
+          "description": "أداة مراقبة فورية لعناقيد Kubernetes توفر رؤى مرئية حول صحة الحاويات وحركة البيانات.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46458567/file/2e9b49bd89bb72ede2e693cfd6e94c0c.mp4"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/KubeMonitor",
+          "likes": 420,
+          "views": 5000
+        },
+        {
+          "id": "4",
+          "title": "SecureVault API",
+          "description": "واجهة خلفية عالية الأمان لتخزين البيانات المشفرة باستخدام JWT و OAuth2 وتشفير AES-256.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46682894/file/71b9a5ccd5e1761eda5aeedadaf8a215.jpg"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/SecureVault",
+          "likes": 290,
+          "views": 4100
+        },
+        {
+          "id": "5",
+          "title": "DataFlow Visualizer",
+          "description": "مشروع علم بيانات يقوم بعرض وتصوير تدفقات البيانات الضخمة المعقدة باستخدام D3.js وخلفية Python.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46687230/file/9ba393e689edbf03bd78db202d096cf8.png"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/DataFlow",
+          "likes": 530,
+          "views": 7800
+        },
+        {
+          "id": "6",
+          "title": "NetPulse",
+          "description": "أداة لتحليل الشبكات واعتراض الحزم مصممة لمتخصصي الأمن السيبراني.",
+          "thumbnail": "https://cdn.dribbble.com/userupload/46683163/file/bb3ff4e83f36b92e8a4ad4606d9f8fee.png",
+          "ImagesList": [
+            {
+              "id": "1",
+              "url": "https://cdn.dribbble.com/userupload/46683163/file/bb3ff4e83f36b92e8a4ad4606d9f8fee.png"
+            },
+            {
+              "id": "2",
+              "url": "https://cdn.dribbble.com/userupload/46683163/file/bb3ff4e83f36b92e8a4ad4606d9f8fee.png"
+            },
+            {
+              "id": "3",
+              "url": "https://cdn.dribbble.com/userupload/46683163/file/bb3ff4e83f36b92e8a4ad4606d9f8fee.png"
+            },
+            {
+              "id": "4",
+              "url": "https://cdn.dribbble.com/userupload/46683163/file/bb3ff4e83f36b92e8a4ad4606d9f8fee.png"
+            }
+          ],
+          "source": "https://github.com/AhmedG3far/NetPulse",
+          "likes": 380,
+          "views": 6200
+        }
+      ],
+      "skills": [
+         {
+          "id": "1",
+          "skillName": "جافاسكربت",
+          "skillLogo": "https://img.icons8.com/?size=48&id=108784&format=png"
+        },
+        {
+          "id": "2",
+          "skillName": "ريأكت",
+          "skillLogo": "https://img.icons8.com/?size=80&id=asWSSTBrDlTW&format=png"
+        },
+        {
+          "id": "3",
+          "skillName": "نود جي اس",
+          "skillLogo": "https://img.icons8.com/?size=48&id=54087&format=png"
+        },
+        {
+          "id": "4",
+          "skillName": "دوكر",
+          "skillLogo": "https://img.icons8.com/?size=80&id=Wln8Z3PcXanx&format=png"
+        },
+        {
+          "id": "5",
+          "skillName": "تيلويند",
+          "skillLogo": "https://img.icons8.com/?size=48&id=4PiNHtUJVbLs&format=png"
+        },
+        {
+          "id": "6",
+          "skillName": "سوبابيس",
+          "skillLogo": "https://img.icons8.com/?size=48&id=sH0rW2TvYdr9&format=png"
+        },
+        {
+          "id": "7",
+          "skillName": "فايربيس",
+          "skillLogo": "https://img.icons8.com/?size=80&id=ROMfFZ1tMhpk&format=png"
+        },
+        {
+          "id": "8",
+          "skillName": "بريسما",
+          "skillLogo": "https://img.icons8.com/?size=48&id=YKKmRFS8Utmm&format=png"
+        }
+      ],
+      "testimonials": [
+        {
+          "id": "1",
+          "profile": "https://imgs.search.brave.com/V26O3ShQFd5qt_DJnNpzw3QzxnbfkBEycyX9GmBz0qI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTIvQXZh/dGFyLVByb2ZpbGUt/UE5HLUltYWdlcy1I/RC5wbmc",
+          "name": "أحمد حسن",
+          "feedback": "محمد مطور مبدع ودقيق جدًا في عمله.",
+          "video": "https://example.com/testimonial-ar-video.mp4",
+          "position": "مدير مشروع في تك كورب",
+          "createdAt": "2025-01-01T12:00:00Z"
+        },
+        {
+          "id": "2",
+          "profile": "https://imgs.search.brave.com/V26O3ShQFd5qt_DJnNpzw3QzxnbfkBEycyX9GmBz0qI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTIvQXZh/dGFyLVByb2ZpbGUt/UE5HLUltYWdlcy1I/RC5wbmc",
+          "name": "سارة محمود",
+          "feedback": "محترف للغاية، التزم بالوقت وتجاوز التوقعات.",
+          "video": "https://example.com/testimonial-ar-video2.mp4",
+          "position": "المدير التقني في ويب سولوشنز",
+          "createdAt": "2025-03-15T15:30:00Z"
+        }
+      ],
+      "layouts": {
+        "id": "1",
+        "heroLayout": "layout1",
+        "expLayout": "layout2",
+        "projectsLayout": "layout3",
+        "skillsLayout": "layout4"
+      },
+      "contacts": {
+        "id": "1",
+        "linkedin": "https://linkedin.com/in/ahmedG3far44",
+        "github": "https://github.com/ahmedG3far44",
+        "youtube": "https://youtube.com/ahmedG3far44",
+        "twitter": "https://twitter.com/ahmedG3far44",
+        "email": "ahmedjaafarbadri@gmail.com",
+        "website": "https://ahmedg3far.online"
+      }
+    }
+  }
 }
